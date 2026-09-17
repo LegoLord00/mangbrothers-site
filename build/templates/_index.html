@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Style explorations | Mangiapane Brothers</title>
+<style>
+body{font-family:Inter,system-ui,sans-serif;margin:0;background:#f4f4f2;color:#1C1C1C}
+.wrap{max-width:900px;margin:0 auto;padding:40px 20px}
+h1{font-size:28px;margin:0 0 6px}
+p{color:#555;margin:0 0 28px}
+ol{list-style:none;padding:0;margin:0;display:grid;gap:10px}
+li a{display:flex;justify-content:space-between;align-items:center;background:#fff;border:1px solid #ddd;border-radius:8px;padding:16px 18px;text-decoration:none;color:inherit;font-weight:600}
+li a span{font-weight:400;color:#777;font-size:14px}
+li a:hover{border-color:#1B4D2E}
+.note{font-size:13px;color:#777;margin-top:30px}
+</style>
+</head>
+<body><div class="wrap">
+<h1>Ten one-page styles</h1>
+<p>Same content on every page: real prices, real photos, real phone and email. Only the design changes. Open each on a phone.</p>
+<ol>
+{% for name,title in pages %}<li><a href="{{name}}">{{title.split('|')[0].strip()}}<span>{{name}}</span></a></li>
+{% endfor %}
+</ol>
+<p class="note">Internal preview. Not linked from anywhere public and marked noindex.</p>
+</div></body></html>

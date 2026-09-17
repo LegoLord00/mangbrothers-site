@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Style 03 Quiet Luxury | Mangiapane Brothers, Livonia MI</title>
+<meta name="description" content="Property maintenance in Livonia and Westland, Michigan for homeowners who expect the work done right. Lawn, fall cleanup, snow, landscaping.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+{{SCHEMA}}
+<style>
+:root{--ink:#17201a;--muted:#6f7570;--line:#e6e6e2;--green:#1B4D2E;--paper:#fbfbf9}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Inter,sans-serif;font-weight:300;color:var(--ink);background:var(--paper);line-height:1.7;font-size:16px}
+h1,h2,h3,.disp{font-family:'Cormorant Garamond',Georgia,serif;font-weight:400;line-height:1.1;letter-spacing:.005em}
+a{color:inherit}
+.wrap{max-width:1180px;margin:0 auto;padding:0 28px}
+header .wrap{display:flex;justify-content:space-between;align-items:center;height:84px}
+header .name{font-family:'Cormorant Garamond',serif;font-size:22px;white-space:nowrap;letter-spacing:.06em;text-transform:uppercase}
+header .name small{display:block;font-family:Inter;font-size:10px;letter-spacing:.3em;color:var(--muted);text-transform:uppercase}
+header nav a{text-decoration:none;font-size:13px;letter-spacing:.12em;text-transform:uppercase;margin-left:28px}
+@media(max-width:760px){header nav a:not(:last-child){display:none}header .name{font-size:17px}header .name small{font-size:8px;letter-spacing:.2em}header nav a{white-space:nowrap;margin-left:12px}}
+.hero{padding:40px 0 0}
+.hero h1{font-size:clamp(40px,7vw,92px);max-width:16ch;line-height:1.02}
+.hero h1 i{font-style:italic}
+.hero .row{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:end;margin-top:32px}
+@media(max-width:760px){.hero .row{grid-template-columns:1fr}}
+.hero p{max-width:44ch;color:#3b413d;font-size:17px}
+.hero .cta-line{margin-top:28px;display:flex;gap:28px;flex-wrap:wrap}
+.hero .cta-line a{text-decoration:none;font-size:13px;letter-spacing:.14em;text-transform:uppercase;border-bottom:1px solid var(--ink);padding-bottom:6px}
+.hero .img{margin-top:56px;aspect-ratio:21/9;background:url(../assets/img/lawn-wide-800.jpg) center/cover}
+@media(max-width:760px){.hero .img{aspect-ratio:4/3}}
+.tag{padding:26px 0;border-bottom:1px solid var(--line);text-align:center;font-family:'Cormorant Garamond',serif;font-size:22px;letter-spacing:.04em}
+section{padding:96px 0}
+.num{font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:var(--muted);margin-bottom:18px}
+h2{font-size:clamp(32px,4.5vw,56px);margin-bottom:24px;max-width:18ch}
+.list{border-top:1px solid var(--line)}
+.item{display:grid;grid-template-columns:1.2fr 2fr .8fr;gap:24px;padding:28px 0;border-bottom:1px solid var(--line);align-items:baseline}
+@media(max-width:760px){.item{grid-template-columns:1fr}}
+.item h3{font-size:28px}
+.item .season{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);display:block;margin-top:6px}
+.item p{color:#3b413d;font-size:15px}
+.item .price{font-family:'Cormorant Garamond',serif;font-size:24px;text-align:right}
+.item .price small{display:block;font-family:Inter;font-size:12px;color:var(--muted);letter-spacing:.02em}
+@media(max-width:760px){.item .price{text-align:left}}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+@media(max-width:760px){.split{grid-template-columns:1fr;gap:32px}}
+.split .img{aspect-ratio:4/5;background:url(../assets/img/gazebo-landscape-800.jpg) center/cover}
+.split p{margin-bottom:16px;color:#3b413d}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+@media(max-width:760px){.grid3{grid-template-columns:1fr}}
+.grid3 figure{margin:0}.grid3 img{width:100%;aspect-ratio:3/4;object-fit:cover;display:block}
+.grid3 figcaption{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-top:10px}
+.stand{display:grid;grid-template-columns:repeat(4,1fr);gap:32px;border-top:1px solid var(--line);padding-top:32px}
+@media(max-width:760px){.stand{grid-template-columns:1fr 1fr}}
+.stand h3{font-size:22px;margin-bottom:8px}.stand p{font-size:14px;color:#3b413d}
+.dark{background:var(--ink);color:#f2f2ee}
+.dark h2{color:#fff}.dark .num{color:#9aa39d}
+.quote .cta{display:block;text-decoration:none;font-family:'Cormorant Garamond',serif;font-size:clamp(28px,4vw,48px);padding:20px 0;border-bottom:1px solid rgba(255,255,255,.2)}
+.quote .cta small{display:block;font-family:Inter;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:#9aa39d;margin-bottom:6px}
+.quote .cta-mail{font-size:clamp(20px,3vw,32px)}
+footer{padding:40px 0;font-size:12px;letter-spacing:.06em;color:var(--muted)}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
+.mobilebar{display:none}
+@media(max-width:720px){.mobilebar{display:flex;position:fixed;bottom:0;left:0;right:0;background:var(--ink);z-index:20}.mobilebar a{flex:1;color:#fff;text-decoration:none;text-align:center;padding:17px;font-size:12px;letter-spacing:.18em;text-transform:uppercase}.mobilebar a+a{border-left:1px solid rgba(255,255,255,.2)}body{padding-bottom:52px}}
+</style>
+</head>
+<body>
+<header><div class="wrap"><div class="name">Mangiapane Brothers<small>Lawn &amp; Snow · Livonia, Michigan</small></div><nav><a href="#services">Services</a><a href="#about">About</a><a href="{{PHONE_TEL}}">{{PHONE_DISPLAY}}</a></nav></div></header>
+
+<section class="hero"><div class="wrap">
+  <h1>The property, <i>taken care of.</i></h1>
+  <div class="row">
+    <p>{{POSITIONING}} Lawn, fall cleanup, snow, and landscaping in Livonia and Westland, handled by a family crew that does not need reminding.</p>
+    <div class="cta-line"><a href="{{PHONE_TEL}}">Call {{PHONE_DISPLAY}}</a><a href="{{SMS_LINK}}">Text for a quote</a></div>
+  </div>
+  <div class="img"></div>
+</div></section>
+<div class="tag">{{TAGLINE}}</div>
+
+<section id="services"><div class="wrap">
+  <div class="num">01 &nbsp; Services</div><h2>Four seasons. One crew.</h2>
+  <div class="list">{% for s in SERVICES %}<div class="item"><div><h3>{{s.name}}</h3><span class="season">{{s.season}}</span></div><p>{{s.blurb}}</p><div class="price">{{s.price}}<small>{{s.note}}</small></div></div>{% endfor %}</div>
+</div></section>
+
+<section style="padding-top:0"><div class="wrap split">
+  <div class="img"></div>
+  <div><div class="num">02 &nbsp; Standards</div><h2>Not close enough. Right.</h2>{% for h,p in WHY %}<p><strong style="font-weight:500">{{h}}.</strong> {{p}}</p>{% endfor %}</div>
+</div></section>
+
+<section style="padding-top:0"><div class="wrap">
+  <div class="num">03 &nbsp; Work</div>
+  <div class="grid3">{% for img,cap in GALLERY[:3] %}<figure><img src="../assets/img/{{img}}-800.jpg" alt="{{cap}}" loading="lazy"><figcaption>{{cap}}</figcaption></figure>{% endfor %}</div>
+</div></section>
+
+<section id="about" style="padding-top:0"><div class="wrap">
+  <div class="num">04 &nbsp; The brothers</div><h2>Started on the streets we grew up on.</h2>
+  <div class="split" style="align-items:start"><div>{% for p in STORY %}<p>{{p}}</p>{% endfor %}</div><div class="stand">{% for b,s in PROMISES %}<div><h3>{{b}}</h3><p>{{s}}</p></div>{% endfor %}</div></div>
+</div></section>
+
+<section class="dark quote" id="quote"><div class="wrap">
+  <div class="num">05 &nbsp; Get a quote</div><h2>Tell us the service and the address.</h2>
+  <a class="cta" href="{{PHONE_TEL}}"><small>Call</small>{{PHONE_DISPLAY}}</a>
+  <a class="cta" href="{{SMS_LINK}}"><small>Text</small>Send a text with the address</a>
+  <a class="cta cta-mail" href="{{MAILTO}}"><small>Email</small>{{EMAIL}}</a>
+  <p style="margin-top:20px;font-size:13px;color:#9aa39d">{{HOURS}}</p>
+</div></section>
+
+<footer><div class="wrap"><span>{{COMPANY}} · {{FOOTER_NOTE}}</span><span>&copy; {{YEAR}}</span></div></footer>
+<div class="mobilebar"><a href="{{SMS_LINK}}">Text</a><a href="{{PHONE_TEL}}">Call</a></div>
+</body></html>

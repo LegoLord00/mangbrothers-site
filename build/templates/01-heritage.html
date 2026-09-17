@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Style 01 Heritage | Mangiapane Brothers Lawn & Snow, Livonia MI</title>
+<meta name="description" content="Lawn care, fall cleanup, snow removal, and landscaping in Livonia and Westland, Michigan. Family owned. {{TAGLINE}}">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+{{SCHEMA}}
+<style>
+:root{--green:#1B4D2E;--green-deep:#12351f;--cream:#F6F2E8;--ink:#1C1C1C;--gold:#C9A84C;--rule:#d9d2c0}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Source Sans 3',sans-serif;color:var(--ink);background:var(--cream);line-height:1.6;font-size:17px}
+h1,h2,h3,.serif{font-family:'Libre Baskerville',Georgia,serif;line-height:1.15}
+a{color:inherit}
+.wrap{max-width:1100px;margin:0 auto;padding:0 20px}
+header{background:var(--cream);border-bottom:1px solid var(--rule);position:sticky;top:0;z-index:10}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:68px}
+header img{height:44px}
+nav a{text-decoration:none;margin-left:22px;font-weight:600;font-size:15px;letter-spacing:.02em}
+nav .phone{color:var(--green)}
+@media(max-width:720px){nav a:not(.phone){display:none}}
+.hero{position:relative;min-height:78vh;display:grid;align-items:end;color:#fff;background:#222 url(../assets/img/lawn-stripes-colonial-800.jpg) center/cover}
+.hero:before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.05) 30%,rgba(18,53,31,.85))}
+.hero .wrap{position:relative;padding:60px 20px 56px}
+.hero .kicker{font-size:13px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:14px}
+.hero h1{font-size:clamp(30px,5vw,54px);max-width:14ch;font-weight:400}
+.hero h1 em{font-style:italic}
+.hero p{max-width:52ch;margin:18px 0 26px;font-size:18px;opacity:.95}
+.btns{display:flex;flex-wrap:wrap;gap:12px}
+.cta{display:inline-block;padding:15px 24px;border-radius:3px;text-decoration:none;font-weight:600;font-size:16px;text-align:center}
+.cta-call{background:var(--gold);color:var(--ink)}
+.cta-text{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.75)}
+.cta-mail{display:none}
+.tag{text-align:center;padding:30px 20px;border-bottom:1px solid var(--rule)}
+.tag .serif{font-size:20px;color:var(--green);letter-spacing:.02em}
+.tag small{display:block;color:#6a6552;margin-top:6px;letter-spacing:.14em;text-transform:uppercase;font-size:12px}
+section{padding:72px 0}
+.sec-h{font-size:clamp(26px,3.5vw,36px);font-weight:400;margin-bottom:8px;color:var(--green-deep)}
+.sec-sub{color:#5f5a4a;max-width:60ch;margin-bottom:36px}
+.services{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1px;background:var(--rule);border:1px solid var(--rule)}
+.svc{background:var(--cream);padding:28px}
+.svc h3{font-size:20px;margin-bottom:4px}
+.svc .season{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#7b7660;margin-bottom:12px}
+.svc p{font-size:15.5px;color:#3a372e}
+.svc .price{margin-top:16px;font-family:'Libre Baskerville',serif;color:var(--green);font-size:18px}
+.svc .note{font-size:13px;color:#7b7660}
+.why{background:var(--green);color:#fff}
+.why .sec-h{color:#fff}.why .sec-sub{color:#cfe0d3}
+.why-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:34px}
+.why-grid h3{font-size:19px;margin-bottom:8px;color:var(--gold)}
+.why-grid p{color:#e3ece5;font-size:15.5px}
+.gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:14px}
+.gallery figure{margin:0}
+.gallery img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block}
+.gallery figcaption{font-size:13px;color:#6a6552;margin-top:6px}
+.story{display:grid;grid-template-columns:1.1fr 1fr;gap:48px;align-items:center}
+@media(max-width:800px){.story{grid-template-columns:1fr}}
+.story p{margin-bottom:16px}
+.story .photo{aspect-ratio:4/5;background:#e7e1d0 url(../assets/img/hedge-brick-800.jpg) center/cover;border:10px solid #fff;box-shadow:0 1px 0 var(--rule)}
+.photo-note{position:relative}
+.photo-note span{position:absolute;bottom:14px;left:14px;background:rgba(255,255,255,.9);padding:6px 10px;font-size:12px;letter-spacing:.1em;text-transform:uppercase}
+.area{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
+@media(max-width:800px){.area{grid-template-columns:1fr}}
+.area ul{list-style:none;columns:2;font-size:17px}
+.area li{padding:8px 0;border-bottom:1px solid var(--rule)}
+.quote{background:#fff;border-top:4px solid var(--gold)}
+.quote .btns{margin-top:22px}
+.quote .cta-call{background:var(--green);color:#fff;font-size:18px;padding:18px 28px}
+.quote .cta-text{color:var(--green);border-color:var(--green)}
+.quote .cta-mail{display:inline-block;color:var(--green);text-decoration:underline;padding:15px 0}
+.quote small{display:block;margin-top:14px;color:#6a6552}
+footer{background:var(--green-deep);color:#cfe0d3;padding:40px 0;font-size:14px}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:14px}
+footer .serif{color:#fff}
+.mobilebar{display:none}
+@media(max-width:720px){
+  .mobilebar{display:grid;grid-template-columns:1fr 1fr;position:fixed;bottom:0;left:0;right:0;z-index:20;background:var(--green);border-top:1px solid rgba(255,255,255,.2)}
+  .mobilebar a{color:#fff;text-decoration:none;text-align:center;padding:16px 8px;font-weight:600}
+  .mobilebar a+a{border-left:1px solid rgba(255,255,255,.2);background:var(--gold);color:var(--ink)}
+  body{padding-bottom:56px}
+}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+  <img src="../assets/logo/logo-main.png" alt="{{COMPANY}}">
+  <nav><a href="#services">Services</a><a href="#about">About</a><a href="#area">Service area</a><a class="phone" href="{{PHONE_TEL}}">{{PHONE_DISPLAY}}</a></nav>
+</div></header>
+
+<section class="hero"><div class="wrap">
+  <div class="kicker">Livonia and Westland, Michigan</div>
+  <h1>Property maintenance for those who take <em>pride</em> in their home.</h1>
+  <p>Lawn, fall cleanup, snow, and landscaping from one family-owned crew. Printed season prices. A phone that gets answered.</p>
+  <div class="btns"><a class="cta cta-call" href="{{PHONE_TEL}}">Call {{PHONE_DISPLAY}}</a><a class="cta cta-text" href="{{SMS_LINK}}">Text for a quote</a></div>
+</div></section>
+
+<div class="tag"><div class="serif">{{TAGLINE}}</div><small>Family owned since 2019</small></div>
+
+<section id="services"><div class="wrap">
+  <h2 class="sec-h">Services</h2>
+  <p class="sec-sub">Every price below is a starting price for a one-storey home. Two-storey and corner lots are quoted by phone in one call.</p>
+  <div class="services">
+  {% for s in SERVICES %}<div class="svc">
+    <div class="season">{{s.season}}</div><h3>{{s.name}}</h3><p>{{s.blurb}}</p>
+    <div class="price">{{s.price}}</div><div class="note">{{s.note}}</div>
+  </div>{% endfor %}
+  </div>
+</div></section>
+
+<section class="why"><div class="wrap">
+  <h2 class="sec-h">Why homeowners keep us</h2>
+  <p class="sec-sub">We are not the cheapest option on your street. We are the one that shows up.</p>
+  <div class="why-grid">{% for h,p in WHY %}<div><h3>{{h}}</h3><p>{{p}}</p></div>{% endfor %}</div>
+</div></section>
+
+<section><div class="wrap">
+  <h2 class="sec-h">Recent work</h2>
+  <p class="sec-sub">Real properties in Livonia. No stock photos anywhere on this site.</p>
+  <div class="gallery">{% for img,cap in GALLERY %}<figure><img src="../assets/img/{{img}}-800.jpg" alt="{{cap}}" loading="lazy"><figcaption>{{cap}}</figcaption></figure>{% endfor %}</div>
+</div></section>
+
+<section id="about" style="background:#fff"><div class="wrap story">
+  <div><h2 class="sec-h">The brothers</h2>{% for p in STORY %}<p>{{p}}</p>{% endfor %}<p class="serif" style="color:var(--green)">Russel Mangiapane III, Owner</p></div>
+  <div class="photo photo-note"><span>Photo of the brothers goes here</span></div>
+</div></section>
+
+<section id="area"><div class="wrap area">
+  <div><h2 class="sec-h">Where we work</h2><p class="sec-sub">Tight routes keep us on time. We stay inside these neighborhoods on purpose.</p></div>
+  <ul>{% for n in NEIGHBORHOODS %}<li>{{n}}</li>{% endfor %}<li>Livonia, MI</li><li>Westland, MI</li></ul>
+</div></section>
+
+<section class="quote" id="quote"><div class="wrap">
+  <h2 class="sec-h">Get a quote</h2>
+  <p class="sec-sub">Call or text. Include the service and the address and we can usually give you a number on the spot.</p>
+  <div class="btns">{{CONTACT_CTAS}}</div>
+  <small>{{HOURS}}</small>
+</div></section>
+
+<footer><div class="wrap">
+  <div><div class="serif">{{COMPANY}}</div>{{FOOTER_NOTE}}</div>
+  <div>{{TAGLINE}}<br>&copy; {{YEAR}} {{COMPANY}}</div>
+</div></footer>
+
+<div class="mobilebar"><a href="{{SMS_LINK}}">Text us</a><a href="{{PHONE_TEL}}">Call now</a></div>
+</body>
+</html>
