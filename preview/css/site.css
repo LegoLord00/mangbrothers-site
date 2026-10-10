@@ -439,3 +439,24 @@ html:has(.detail){scroll-behavior:smooth}
 .bar a.callnow small{font-size:11px;font-weight:600;opacity:.85;letter-spacing:.02em}
 @media (max-width:819px){.book{display:none}}
 @media (prefers-reduced-motion:reduce){.book{transition:none}.book-txt small::before{animation:none}}
+
+/* winter: lights and snow get equal billing, each with its own accent */
+.detail .lights{--accent:#A3302F;--accent-soft:#F6DFDB;--accent-line:#E6B7B1}
+.detail .snow{--accent:var(--frost);--accent-soft:#DCE8F1;--accent-line:#B9CFE0}
+.detail .lights .eyebrow,.detail .snow .eyebrow{color:var(--accent)}
+.detail .lights .prices li b{color:var(--accent)}
+.twin{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px;margin-top:30px}
+.twin-card{position:relative;display:flex;flex-direction:column;gap:12px;background:var(--card);border:2px solid var(--ink);border-radius:20px;padding:26px;box-shadow:7px 7px 0 var(--accent-line);border-top:10px solid var(--accent)}
+.twin-card .ico{width:52px;height:52px;border-radius:14px;background:var(--accent-soft);color:var(--accent);display:flex;align-items:center;justify-content:center}
+.twin-card h3{font-family:var(--display);font-weight:800;font-size:clamp(26px,2.6vw,34px);line-height:1.05;margin:0}
+.twin-card p{margin:0;color:var(--ink-soft);font-size:16px;line-height:1.55;max-width:42ch}
+.twin-card .from{display:flex;align-items:baseline;gap:10px;margin-top:auto;padding-top:8px}
+.twin-card .from small{font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#7A7262}
+.twin-card .from b{font-family:var(--display);font-weight:800;font-size:46px;line-height:1;font-variant-numeric:tabular-nums}
+.twin-card .from span{font-size:15px;color:var(--ink-soft);font-weight:600}
+.twin-card .btn.see{background:var(--accent-soft);color:var(--accent)}
+.twin-card .btn.see:hover{filter:brightness(.97)}
+.detail .twin-card.lights,.detail .twin-card.snow{--notch:#FFFDF8}
+.lights .promises,.snow .promises{margin-top:26px}
+.snow .ptable{margin-top:28px}
+@media (max-width:819px){.twin{grid-template-columns:minmax(0,1fr);gap:16px}.twin-card{padding:20px}.twin-card .from b{font-size:40px}}
