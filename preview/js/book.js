@@ -1,4 +1,4 @@
-/* "Now booking" call button: the line follows the calendar, the button appears once you scroll and steps aside at the call section */
+/* "Now booking" call button: the line follows the calendar, the button slides in shortly after the page loads and steps aside at the call section */
 (() => {
   const m = new Date().getMonth(); // 0 = January
   const line = m >= 7 && m <= 9 ? 'Now booking fall cleanups and snow'
@@ -7,10 +7,9 @@
     : 'Now booking weekly mowing';
   document.querySelectorAll('[data-book]').forEach(el => { el.textContent = line; });
   const btn = document.querySelector('.book'); if (!btn) return;
-  let pastTop = false, atCta = false;
-  const update = () => btn.classList.toggle('show', pastTop && !atCta);
-  const onScroll = () => { pastTop = scrollY > innerHeight * .5; update(); };
-  addEventListener('scroll', onScroll, { passive: true }); onScroll();
+  let ready = false, atCta = false;
+  const update = () => btn.classList.toggle('show', ready && !atCta);
+  setTimeout(() => { ready = true; update(); }, 1200);
   const end = document.querySelectorAll('.cta, .foot');
   if ('IntersectionObserver' in window && end.length) {
     const seen = new Set();
