@@ -328,7 +328,7 @@ img{max-width:100%}
 .promise span{font-size:14px;color:var(--ink-soft);line-height:1.5}
 
 /* service cards */
-.svc-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin-top:28px;list-style:none;padding:0}
+.svc-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:28px;list-style:none;padding:0}
 .svc-grid li{background:var(--card);border:1.5px solid var(--line);border-radius:14px;padding:16px;display:flex;flex-direction:column;gap:6px}
 .svc-grid li b{font-weight:700;font-size:16px}
 .svc-grid li span{font-size:14px;color:var(--ink-soft);line-height:1.5}
@@ -421,3 +421,21 @@ html:has(.detail){scroll-behavior:smooth}
   .jump span{display:none}
   .jump a{font-size:14px;padding:7px 12px}
 }
+
+/* floating "now booking" call button */
+.book{position:fixed;right:24px;bottom:24px;z-index:35;display:flex;align-items:center;gap:14px;padding:10px 10px 10px 18px;text-decoration:none;color:var(--ink);
+  background:var(--card);border:2px solid var(--ink);border-radius:999px;box-shadow:6px 6px 0 rgba(28,38,32,.2);
+  opacity:0;transform:translateY(18px);pointer-events:none;transition:opacity .3s ease,transform .3s ease,box-shadow .15s ease}
+.book.show{opacity:1;transform:none;pointer-events:auto}
+.book:hover{box-shadow:8px 8px 0 rgba(28,38,32,.24)}
+.book-txt{display:flex;flex-direction:column;line-height:1.15}
+.book-txt small{display:flex;align-items:center;gap:7px;font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--brand)}
+.book-txt small::before{content:"";width:8px;height:8px;border-radius:50%;background:#2FA34A;box-shadow:0 0 0 0 rgba(47,163,74,.6);animation:live 2s ease-out infinite}
+.book-txt b{font-family:var(--display);font-weight:800;font-size:22px;font-variant-numeric:tabular-nums;margin-top:3px}
+.book-ico{width:46px;height:46px;border-radius:50%;background:var(--brand);display:flex;align-items:center;justify-content:center;flex:none}
+.book:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
+@keyframes live{70%{box-shadow:0 0 0 8px rgba(47,163,74,0)}100%{box-shadow:0 0 0 0 rgba(47,163,74,0)}}
+.bar a.callnow{flex-direction:column;gap:1px;line-height:1.15}
+.bar a.callnow small{font-size:11px;font-weight:600;opacity:.85;letter-spacing:.02em}
+@media (max-width:819px){.book{display:none}}
+@media (prefers-reduced-motion:reduce){.book{transition:none}.book-txt small::before{animation:none}}
