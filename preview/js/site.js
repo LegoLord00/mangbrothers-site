@@ -13,60 +13,58 @@
   let seed = 11; const rnd = () => (seed = (seed * 16807) % 2147483647) / 2147483647;
 
   /* ---------- scene parts ---------- */
-  const stripes = $('stripes');
+  // mower stripes across the front lawn, drawn by one pass on load
+  const stripes = $('stripes'), stripeSet = $('stripeSet');
   for (let i = -4; i < 15; i++) {
     const x = i * 96, p = document.createElementNS(NS, 'path');
-    p.setAttribute('d', `M${x} 542 L${x + 48} 542 L${x + 48 + (i - 5) * 18} 700 L${x + (i - 5) * 18} 700Z`);
-    p.setAttribute('fill', '#82BE5E'); p.setAttribute('opacity', '.42'); stripes.appendChild(p);
+    p.setAttribute('d', `M${x} 518 L${x + 48} 518 L${x + 48 + (i - 5) * 9} 604 L${x + (i - 5) * 9} 604Z`);
+    p.setAttribute('fill', '#8BC566'); p.setAttribute('opacity', '.4'); stripeSet.appendChild(p);
   }
   const mowRect = $('mowRect');
   if (reduce) mowRect.setAttribute('width', 1700);
   else { const t0 = performance.now(); const mow = now => { const k = clamp((now - t0 - 400) / 2000); mowRect.setAttribute('width', 1700 * easeIO(k)); if (k < 1) requestAnimationFrame(mow); }; requestAnimationFrame(mow); }
 
-  const fence = $('fence'), fenceSnow = document.createElementNS(NS, 'g');
-  fenceSnow.setAttribute('fill', '#FFFFFF'); fenceSnow.setAttribute('opacity', 0);
-  for (let x = -260; x < 1300; x += 13) {
-    const r = document.createElementNS(NS, 'path');
-    r.setAttribute('d', `M${x} 541 L${x} 524 L${x + 3.5} 520 L${x + 7} 524 L${x + 7} 541Z`); r.setAttribute('fill', '#F6F2E8'); fence.appendChild(r);
-    const s = document.createElementNS(NS, 'ellipse'); s.setAttribute('cx', x + 3.5); s.setAttribute('cy', 520.5); s.setAttribute('rx', 4.6); s.setAttribute('ry', 2.2); fenceSnow.appendChild(s);
-  }
-  const rail = document.createElementNS(NS, 'rect');
-  rail.setAttribute('x', -260); rail.setAttribute('y', 528); rail.setAttribute('width', 1560); rail.setAttribute('height', 3); rail.setAttribute('fill', '#E2DCCD');
-  fence.appendChild(rail);
-  const railSnow = document.createElementNS(NS, 'rect');
-  railSnow.setAttribute('x', -260); railSnow.setAttribute('y', 526); railSnow.setAttribute('width', 1560); railSnow.setAttribute('height', 2.4); railSnow.setAttribute('rx', 1.2);
-  fenceSnow.appendChild(railSnow); fence.appendChild(fenceSnow);
-
+  // leaves scattered on the lawn in fall
   const fallCols = ['#C9561F', '#E1912E', '#B33B1B', '#E8B53C', '#D06A22', '#9E3418'].map(hex);
   const gl = $('groundLeaves'), groundLeaves = [];
-  for (let i = 0; i < 110; i++) {
-    const e = document.createElementNS(NS, 'path'), cx = -200 + rnd() * 1400, cy = 552 + Math.pow(rnd(), .7) * 140, s = .6 + (cy - 550) / 140 * 1.1;
+  for (let i = 0; i < 90; i++) {
+    const e = document.createElementNS(NS, 'path'), cx = -200 + rnd() * 1400, cy = 524 + Math.pow(rnd(), .8) * 74, s = .55 + (cy - 520) / 80 * .7;
     e.setAttribute('d', `M${-7 * s} 0 Q0 ${-4 * s} ${7 * s} 0 Q0 ${4 * s} ${-7 * s} 0Z`);
     e.setAttribute('transform', `translate(${cx.toFixed(1)} ${cy.toFixed(1)}) rotate(${(rnd() * 180).toFixed(0)})`);
     e.setAttribute('fill', rgb(fallCols[i % 6])); e.setAttribute('opacity', 0);
     gl.appendChild(e); groundLeaves.push([e, rnd() * .7]);
   }
 
-  // Christmas lights along the roofline and the shrubs
-  const lightsG = $('lights'), bulbs = [], bulbCols = ['#F2C14E', '#E4572E', '#3BB273', '#4F9DDE', '#F7F3E3'];
-  for (let i = 0; i <= 16; i++) { const u = i / 16, x = -10 + u * 168, y = 36 - (1 - Math.abs(u - .5) * 2) * 44 + 3; bulbs.push([x, y]); }
-  for (let i = 0; i < 7; i++) { bulbs.push([4 + i * 6, 122 - Math.sin(i / 6 * Math.PI) * 6]); bulbs.push([108 + i * 6, 122 - Math.sin(i / 6 * Math.PI) * 6]); }
-  const bulbEls = bulbs.map(([x, y], i) => {
-    const c = document.createElementNS(NS, 'circle'); c.setAttribute('cx', x.toFixed(1)); c.setAttribute('cy', y.toFixed(1)); c.setAttribute('r', 3.3); c.setAttribute('stroke', bulbCols[i % 5]); c.setAttribute('stroke-opacity', '.35'); c.setAttribute('stroke-width', '3');
-    c.setAttribute('fill', bulbCols[i % 5]); lightsG.appendChild(c); return c;
+  // Christmas lights strung along each roofline marked data-roof
+  const bulbCols = ['#F2C14E', '#E4572E', '#3BB273', '#4F9DDE', '#F7F3E3'], bulbEls = [], bulbGroups = [...document.querySelectorAll('.bulbs')];
+  bulbGroups.forEach(g => {
+    g.getAttribute('data-roof').split('M').forEach(run => {
+      const pts = run.trim().split(/\s+/).map(p => p.split(',').map(Number));
+      for (let j = 0; j < pts.length - 1; j++) {
+        const [x0, y0] = pts[j], [x1, y1] = pts[j + 1], n = Math.max(2, Math.round(Math.hypot(x1 - x0, y1 - y0) / 11));
+        for (let i = 0; i < n; i++) {
+          const u = i / n, c = document.createElementNS(NS, 'circle'), k = bulbEls.length;
+          c.setAttribute('cx', (x0 + (x1 - x0) * u).toFixed(1)); c.setAttribute('cy', (y0 + (y1 - y0) * u + 2.5).toFixed(1)); c.setAttribute('r', 3);
+          c.setAttribute('fill', bulbCols[k % 5]); c.setAttribute('stroke', bulbCols[k % 5]); c.setAttribute('stroke-opacity', '.35'); c.setAttribute('stroke-width', '3');
+          g.appendChild(c); bulbEls.push(c);
+        }
+      }
+    });
+    g.setAttribute('opacity', 0);
   });
-  lightsG.setAttribute('opacity', 0);
 
-  /* season palettes: summer, fall, winter */
-  const C = {
-    skyTop: ['#A9D4E6', '#EBA978', '#B4C6D6'], skyBot: ['#E8F3EC', '#F7DDBA', '#EEF2F5'], sunCore: ['#FFF7D6', '#FFC27A', '#F7F9FB'], sunHalo: ['#FFF7D6', '#FFC27A', '#F7F9FB'],
-    hillFar: ['#A4CA95', '#D6A56E', '#DCE4EB'], bushes: ['#8DB97C', '#C98B4B', '#E6ECF1'], hillNear: ['#79AE63', '#B8793F', '#EAF0F4'],
-    gTop: ['#5C9A3C', '#93833E', '#F6F8FA'], gBot: ['#3D772A', '#6E6230', '#DCE4EA'], wall: ['#F0E9D8', '#EADCC0', '#E8E1D1'],
-    wins: ['#6F8E9A', '#F3C46B', '#F6C766'], shrubs: ['#4F8A37', '#9A6A2C', '#E3EAF0'], clouds: ['#FFFFFF', '#FBE3CB', '#F3F5F8']
+  /* every element marked data-fill, data-stop, or data-op carries its summer, fall, and winter value */
+  const tri3 = (arr, k1, k2) => k2 > 0 ? lerp(arr[1], arr[2], k2) : lerp(arr[0], arr[1], k1);
+  const triC = (arr, k1, k2) => k2 > 0 ? mixA(arr[1], arr[2], k2) : mixA(arr[0], arr[1], k1);
+  const fills = [...document.querySelectorAll('[data-fill]')].map(el => ({ el, v: el.getAttribute('data-fill').split(',').map(hex) }));
+  const stops = [...document.querySelectorAll('[data-stop]')].map(el => ({ el, v: el.getAttribute('data-stop').split(',').map(hex) }));
+  const ops = [...document.querySelectorAll('[data-op]')].map(el => ({ el, v: el.getAttribute('data-op').split(',').map(Number) }));
+  const paintSeason = (k1, k2) => {
+    fills.forEach(f => f.el.setAttribute('fill', rgb(triC(f.v, k1, k2))));
+    stops.forEach(f => f.el.setAttribute('stop-color', rgb(triC(f.v, k1, k2))));
+    ops.forEach(f => f.el.setAttribute('opacity', tri3(f.v, smooth(k1), smooth(k2)).toFixed(3)));
   };
-  const els = {}; for (const k in C) { els[k] = $(k); C[k] = C[k].map(hex); }
-  const isStop = k => ['skyTop', 'skyBot', 'sunCore', 'sunHalo', 'gTop', 'gBot'].includes(k);
-  const tri = (arr, k1, k2) => k2 > 0 ? mixA(arr[1], arr[2], k2) : mixA(arr[0], arr[1], k1);
+  const scene = $('scene');
   const stageEl = $('stage');
 
   /* ---------- the oak ---------- */
@@ -201,6 +199,7 @@
     const d = Math.min(2, devicePixelRatio || 1);
     W = stageEl.clientWidth || 1; H = stageEl.clientHeight || 1; mobile = W < 820;
     cv.width = W * d; cv.height = H * d; ctx.setTransform(d, 0, 0, d, 0, 0);
+    { const sv = $('scene'), sw = sv.clientWidth || W, sh = sv.clientHeight || H, sc = Math.max(sw / 1000, sh / 700), lawnY = sh - (700 - 590) * sc; treeEl.style.bottom = Math.max(0, H - lawnY) + 'px'; }
     tw = treeEl.clientWidth || 1; th = treeEl.clientHeight || 1; tcv.width = tw * d; tcv.height = th * d; tc.setTransform(d, 0, 0, d, 0, 0);
     dirty = true;
   };
@@ -214,8 +213,9 @@
     input.addEventListener('input', set); set();
   });
 
-  const c1 = $('cloud1'), c2 = $('cloud2');
-  let p = progress(), lastY = scrollY, vel = 0, last = performance.now(), crown = { cx: 0, cy: 0, R: 1 }, lastKey = '';
+  const c1 = $('cloud1'), c2 = $('cloud2'), c3 = $('cloud3');
+  { const t = $('today'); if (t) { const n = new Date(), dim = new Date(n.getFullYear(), n.getMonth() + 1, 0).getDate(); t.style.setProperty('--t', (n.getMonth() + (n.getDate() - 1) / dim).toFixed(3)); } }
+  let seasonKey = '', p = progress(), lastY = scrollY, vel = 0, last = performance.now(), crown = { cx: 0, cy: 0, R: 1 }, lastKey = '';
   const frame = now => {
     const dt = Math.min(50, now - last); last = now;
     if (stageEl.clientWidth !== W || stageEl.clientHeight !== H || treeEl.clientWidth !== tw) size();
@@ -224,17 +224,15 @@
     const k1 = ease(clamp((p - .14) / .28)), k2 = ease(clamp((p - .58) / .28));
 
     // colours
-    for (const k in C) { const v = rgb(tri(C[k], k1, k2)); isStop(k) ? els[k].setAttribute('stop-color', v) : els[k].setAttribute('fill', v); }
-    $('sun').setAttribute('cy', lerp(170, 250, k1) - 40 * k2);
+    if (seasonKey !== `${k1.toFixed(4)}|${k2.toFixed(4)}`) { paintSeason(k1, k2); seasonKey = `${k1.toFixed(4)}|${k2.toFixed(4)}`; }
+    $('sun').setAttribute('cy', lerp(160, 250, k1) - 50 * k2);
     stripes.setAttribute('opacity', 1 - k1);
     const gOn = 1 - smooth(clamp(k2 * 1.6));
     groundLeaves.forEach(([e, d]) => e.setAttribute('opacity', clamp((k1 - d) / .3) * gOn));
-    const sOn = smooth(clamp((k2 - .35) / .5));
-    ['roofSnow', 'chimSnow', 'drifts'].forEach(id => $(id).setAttribute('opacity', sOn)); fenceSnow.setAttribute('opacity', sOn);
     const lOn = smooth(clamp((k2 - .6) / .35));
-    $('lights').setAttribute('opacity', lOn); $('wreath').setAttribute('opacity', lOn);
-    if (lOn > 0 && !reduce) bulbEls.forEach((b, i) => b.setAttribute('opacity', .65 + .35 * Math.sin(now * .004 + i * 1.7)));
-    if (!reduce) { c1.setAttribute('transform', `translate(${(now * .004) % 1400 - 250} 0)`); c2.setAttribute('transform', `translate(${(now * .0025) % 1400 - 650} 0)`); }
+    bulbGroups.forEach(g => g.setAttribute('opacity', lOn));
+    if (lOn > 0 && !reduce) bulbEls.forEach((b, i) => b.setAttribute('opacity', .6 + .4 * Math.sin(now * .004 + i * 1.7)));
+    if (!reduce) { c1.setAttribute('transform', `translate(${(now * .004) % 1400 - 250} 0)`); c2.setAttribute('transform', `translate(${(now * .0025) % 1400 - 650} 0)`); if (c3) c3.setAttribute('transform', `translate(${(now * .0018) % 1400 - 900} 0)`); }
 
     // oak: left for summer, right for fall, left again for winter, one full turn each change
     const x0 = mobile ? -tw * .08 : W * .03, x1 = mobile ? W - tw * .92 : W * .97 - tw;
