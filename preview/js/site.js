@@ -196,7 +196,7 @@
   const contents = [$('c0'), $('c1'), $('c2')], peeks = [$('k0'), $('k1'), $('k2')];
   const navLinks = document.querySelectorAll('.nav [data-go]'), dotLinks = document.querySelectorAll('.dots [data-go]');
   let shown = -1;
-  const barSee = $('barSee'), seePages = [['spring-summer.html', 'Lawn prices'], ['fall-cleanup.html', 'Fall prices'], ['snow-and-lights.html', 'Lights and snow prices']];
+  const barSee = $('barSee'), seePages = [['spring-summer.html', 'Lawn prices'], ['fall-cleanup.html', 'Fall prices'], ['snow-and-lights.html', 'Lights & snow prices']];
   const setActive = i => {
     if (i === shown) return; shown = i;
     if (barSee) { barSee.href = seePages[i][0]; barSee.textContent = seePages[i][1]; }
