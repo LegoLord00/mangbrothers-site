@@ -196,12 +196,25 @@
   const contents = [$('c0'), $('c1'), $('c2')], peeks = [$('k0'), $('k1'), $('k2')];
   const navLinks = document.querySelectorAll('.nav [data-go]'), dotLinks = document.querySelectorAll('.dots [data-go]');
   let shown = -1;
+  const barSee = $('barSee'), seePages = [['spring-summer.html', 'Lawn prices'], ['fall-cleanup.html', 'Fall prices'], ['snow-and-lights.html', 'Snow and lights prices']];
   const setActive = i => {
     if (i === shown) return; shown = i;
+    if (barSee) { barSee.href = seePages[i][0]; barSee.textContent = seePages[i][1]; }
     contents.forEach((c, j) => { c.classList.toggle('on', j === i); if (j === i) c.removeAttribute('inert'); else c.setAttribute('inert', ''); });
     peeks.forEach((k, j) => { k.classList.toggle('on', j === i); k.tabIndex = j === i ? 0 : -1; });
     [navLinks, dotLinks].forEach(list => list.forEach((a, j) => { if (j === i) a.setAttribute('aria-current', 'true'); else a.removeAttribute('aria-current'); }));
   };
+
+  // page-to-page: hand the season card and the scene to the season page (and back)
+  const tag = (i, on) => { const c = contents[i]; if (!c) return; c.style.viewTransitionName = on ? 'card' : ''; stageEl.style.viewTransitionName = on ? 'scene' : ''; };
+  document.querySelectorAll('.btn.see, #barSee').forEach(a => a.addEventListener('click', () => tag(shown, true)));
+  addEventListener('pageshow', () => contents.forEach((c, i) => tag(i, false)));
+  addEventListener('pagereveal', e => {
+    const i = { '#summer': 0, '#fall': 1, '#winter': 2 }[location.hash];
+    if (!e.viewTransition || i === undefined) return;
+    jumpToHash(); setActive(i); tag(i, true);
+    e.viewTransition.finished.finally(() => tag(i, false));
+  });
 
   const size = () => {
     const d = Math.min(2, devicePixelRatio || 1);

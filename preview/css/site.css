@@ -383,3 +383,41 @@ img{max-width:100%}
   .stamp{transform:none}
 }
 .detail .cta .eyebrow{color:var(--gold)}
+
+/* the way into each season page */
+.btn.see{flex:1 1 100%;justify-content:space-between;background:#E3EEDF;color:var(--brand);box-shadow:inset 0 0 0 2px var(--ink);min-height:52px;font-size:16px}
+.btn.see:hover{background:#D6E7D0}
+.btn.see svg{transition:transform .2s ease}
+.btn.see:hover svg{transform:translateX(4px)}
+.fall .btn.see{background:#F8E2D0;color:#8A3A16}
+.fall .btn.see:hover{background:#F3D2B8}
+.winter .btn.see{background:#DCE8F1;color:var(--frost)}
+.winter .btn.see:hover{background:#CADDEB}
+.content .ctas .call{flex:1 1 auto}
+
+/* on-page jump strip */
+.jump{position:sticky;top:var(--hdr);z-index:20;background:var(--card);border-bottom:2px solid var(--ink)}
+.jump .wrap{display:flex;align-items:center;gap:6px;overflow-x:auto;scrollbar-width:none;padding-block:10px}
+.jump .wrap::-webkit-scrollbar{display:none}
+.jump span{font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#7A7262;margin-right:8px;white-space:nowrap}
+.jump a{white-space:nowrap;text-decoration:none;font-weight:600;font-size:15px;padding:8px 14px;border-radius:999px;color:var(--ink-soft);box-shadow:inset 0 0 0 1.5px var(--line)}
+.jump a:hover{color:var(--accent);background:var(--accent-soft);box-shadow:inset 0 0 0 1.5px var(--accent-line)}
+.detail .sec[id]{scroll-margin-top:calc(var(--hdr) + 56px)}
+html:has(.detail){scroll-behavior:smooth}
+
+/* page-to-page: the season card and the scene carry over */
+@view-transition{navigation:auto}
+.dhero>img{view-transition-name:scene}
+.dhero .content{view-transition-name:card}
+::view-transition-group(scene),::view-transition-group(card){animation-duration:.45s;animation-timing-function:cubic-bezier(.2,.7,.2,1)}
+::view-transition-old(root),::view-transition-new(root){animation-duration:.3s}
+@media (prefers-reduced-motion:reduce){::view-transition-group(*),::view-transition-old(*),::view-transition-new(*){animation:none!important}html:has(.detail){scroll-behavior:auto}}
+
+@media (max-width:819px){
+  .content .ctas{display:flex}
+  .content .ctas .call{display:none}
+  .btn.see{min-height:48px;font-size:15px}
+  .dhero .content .ctas .call{display:inline-flex}
+  .jump span{display:none}
+  .jump a{font-size:14px;padding:7px 12px}
+}
