@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bitter:wght@700;800&family=Public+Sans:wght@400;500;600;700&display=swap">
-<link rel="stylesheet" href="css/site.css?v=11">
+<link rel="stylesheet" href="css/site.css?v=12">
 </head>
 <body>
 <header class="hdr">
@@ -33,22 +33,20 @@
   <div class="stage" id="stage">
     <svg class="scene" id="scene" viewBox="0 0 1000 700" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
       <defs>
-        <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop data-stop="#9ECFE4,#E7A06F,#9FB3C8" offset="0" stop-color="#9ECFE4"/><stop data-stop="#E9F4EC,#F8DDB8,#E9EEF3" offset=".78" stop-color="#E9F4EC"/></linearGradient>
-        <radialGradient id="sunG"><stop data-stop="#FFF8DA,#FFC27A,#FBF4EA" offset=".28" stop-color="#FFF8DA"/><stop data-stop="#FFF8DA,#FFC27A,#FBF4EA" offset="1" stop-color="#FFF8DA" stop-opacity="0"/></radialGradient>
-        <linearGradient id="grass" x1="0" y1="0" x2="0" y2="1"><stop data-stop="#5FA03E,#9A8A41,#F4F7FA" offset="0" stop-color="#5FA03E"/><stop data-stop="#447F2E,#786A33,#DDE5EC" offset="1" stop-color="#447F2E"/></linearGradient>
-        <linearGradient id="road" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#6A6E72"/><stop offset="1" stop-color="#55595D"/></linearGradient>
         <clipPath id="mow"><rect id="mowRect" x="-300" y="0" width="0" height="700"/></clipPath>
         <clipPath id="lawnClip"><rect x="-300" y="520" width="1600" height="80"/></clipPath>
       </defs>
 
-      <rect width="1000" height="700" fill="url(#sky)"/>
-      <circle id="sun" cx="690" cy="160" r="170" fill="url(#sunG)"/>
+      <rect width="1000" height="700" data-fill="#A8D2E2,#E9A877,#AFC0D0" fill="#A8D2E2"/>
+      <rect x="-300" y="300" width="1600" height="400" data-fill="#BFDDE6,#F0BE8E,#C3D0DC" fill="#BFDDE6"/>
+      <rect x="-300" y="372" width="1600" height="330" data-fill="#D4E8E6,#F5D2A6,#D6DFE7" fill="#D4E8E6"/>
+      <circle id="sun" cx="690" cy="160" r="44" data-fill="#FBF0C8,#FAD08A,#F1F2EE" fill="#FBF0C8"/>
       <g id="birds" data-op="1,0,0" fill="none" stroke="#3E5260" stroke-width="2" stroke-linecap="round"><path d="M250 120q6-6 12 0q6-6 12 0"/><path d="M290 100q5-5 10 0q5-5 10 0"/><path d="M226 92q4-4 8 0q4-4 8 0"/></g>
       <g id="geese" data-op="0,1,0" fill="none" stroke="#4A3A2E" stroke-width="2" stroke-linecap="round"><path d="M520 80q5-5 10 0q5-5 10 0"/><path d="M500 92q5-5 10 0q5-5 10 0"/><path d="M480 104q5-5 10 0q5-5 10 0"/><path d="M540 92q5-5 10 0q5-5 10 0"/><path d="M560 104q5-5 10 0q5-5 10 0"/><path d="M460 116q5-5 10 0q5-5 10 0"/></g>
-      <g data-fill="#FFFFFF,#FCE6CF,#F4F6F9" fill="#FFFFFF" opacity=".85">
-        <g id="cloud1"><ellipse cx="150" cy="190" rx="84" ry="21"/><ellipse cx="190" cy="173" rx="47" ry="26"/><ellipse cx="128" cy="179" rx="34" ry="18"/></g>
-        <g id="cloud2"><ellipse cx="560" cy="118" rx="60" ry="15"/><ellipse cx="588" cy="105" rx="34" ry="19"/></g>
-        <g id="cloud3"><ellipse cx="880" cy="230" rx="70" ry="16"/><ellipse cx="910" cy="218" rx="38" ry="19"/></g>
+      <g data-fill="#FFFFFF,#FCE6CF,#F4F6F9" fill="#FFFFFF" opacity=".92">
+        <g id="cloud1"><path d="M70 196 H246 A22 22 0 0 0 214 172 A30 30 0 0 0 160 160 A24 24 0 0 0 116 170 A20 20 0 0 0 86 180 A16 16 0 0 0 70 196Z"/></g>
+        <g id="cloud2"><path d="M506 124 H628 A18 18 0 0 0 602 106 A24 24 0 0 0 558 98 A18 18 0 0 0 524 110 A14 14 0 0 0 506 124Z"/></g>
+        <g id="cloud3"><path d="M818 236 H958 A20 20 0 0 0 930 214 A26 26 0 0 0 882 206 A20 20 0 0 0 846 218 A15 15 0 0 0 818 236Z"/></g>
       </g>
 
       <path d="M-300 470 C 40 395 240 420 420 436 C 600 452 780 386 1300 426 L1300 700 L-300 700Z" data-fill="#A6CC98,#D7A770,#DCE4EC" fill="#A6CC98"/>
@@ -73,6 +71,14 @@
         <g class="bulbs" data-roof="-8,38 80,0 168,38"></g>
       </g>
 
+      <!-- utility pole, wires, street sign -->
+      <g fill="none" stroke="#3C3A36" stroke-width="1.4" stroke-linecap="round"><path d="M272 309 Q0 336 -300 268"/><path d="M300 309 Q700 372 1300 248"/><path d="M286 316 Q760 420 1300 296"/></g>
+      <rect x="283" y="298" width="7" height="304" fill="#6B5442"/>
+      <rect x="268" y="304" width="38" height="5" fill="#5A4636"/>
+      <rect data-op="0,0,1" opacity="0" x="282" y="295" width="9" height="4" rx="2" fill="#FFFFFF"/>
+      <rect x="258" y="462" width="56" height="10" rx="1.5" fill="#2E7D4F"/><rect x="262" y="466" width="48" height="2" fill="#FFFFFF" opacity=".9"/>
+      <rect x="280" y="474" width="14" height="9" rx="1.5" fill="#24654A"/>
+
       <!-- background trees -->
       <g id="bgTrees">
         <g transform="translate(220 470)"><rect x="-4" y="0" width="8" height="52" fill="#5A4130"/><circle cy="-6" r="30" data-fill="#4E8A3A,#D9822B,#D9822B" fill="#4E8A3A" data-op="1,1,0"/><path data-op="0,0,1" opacity="0" d="M0 6 L-18 -24 M0 0 L16 -28 M0 -6 L2 -34 M-9 -10 L-24 -14 M8 -14 L24 -12" stroke="#5A4130" stroke-width="3" stroke-linecap="round" fill="none"/></g>
@@ -80,49 +86,111 @@
         <g transform="translate(980 466)"><rect x="-4" y="0" width="8" height="56" fill="#5A4130"/><circle cy="-8" r="34" data-fill="#477F35,#E8B53C,#E8B53C" fill="#477F35" data-op="1,1,0"/><path data-op="0,0,1" opacity="0" d="M0 6 L-20 -26 M0 0 L18 -30 M0 -6 L2 -38" stroke="#5A4130" stroke-width="3" stroke-linecap="round" fill="none"/></g>
       </g>
 
-      <!-- the Mangiapane house -->
+      <!-- the Mangiapane house: a Livonia brick ranch -->
       <g id="house">
-        <rect x="452" y="392" width="16" height="34" fill="#7B4A3A"/>
-        <path d="M316 434 L400 384 L484 434Z" fill="#4A5158"/>
-        <path data-op="0,0,1" opacity="0" d="M313 432 L400 380 L487 432 L474 432 L400 388 L326 432Z" fill="#FFFFFF"/>
-        <rect data-op="0,0,1" opacity="0" x="450" y="388" width="20" height="6" rx="3" fill="#FFFFFF"/>
-        <rect x="326" y="434" width="148" height="88" data-fill="#F1EADA,#ECDDC2,#E9E2D2" fill="#F1EADA"/>
-        <rect x="326" y="434" width="148" height="5" fill="#000000" opacity=".08"/>
-        <g data-fill="#62818E,#F3C46B,#F6C766" fill="#62818E"><rect x="342" y="446" width="20" height="24"/><rect x="390" y="446" width="20" height="24"/><rect x="438" y="446" width="20" height="24"/><rect x="342" y="484" width="20" height="24"/><rect x="438" y="484" width="20" height="24"/></g>
-        <g fill="#2F4A3A"><rect x="338" y="446" width="4" height="24"/><rect x="362" y="446" width="4" height="24"/><rect x="434" y="446" width="4" height="24"/><rect x="458" y="446" width="4" height="24"/><rect x="338" y="484" width="4" height="24"/><rect x="362" y="484" width="4" height="24"/><rect x="434" y="484" width="4" height="24"/><rect x="458" y="484" width="4" height="24"/></g>
-        <rect x="390" y="482" width="20" height="40" fill="#1B4D2E"/>
-        <path d="M382 482 L400 472 L418 482Z" fill="#4A5158"/>
-        <g data-op="0,0,1" opacity="0"><circle cx="400" cy="495" r="6" fill="none" stroke="#2F6B2A" stroke-width="3.2"/><circle cx="400" cy="489" r="1.8" fill="#C0392B"/></g>
+        <rect x="468" y="424" width="14" height="22" fill="#9A4F38"/>
+        <rect data-op="0,0,1" opacity="0" x="466" y="421" width="18" height="5" rx="2.5" fill="#FFFFFF"/>
+        <rect x="314" y="470" width="206" height="52" fill="#B4654A"/>
+        <path d="M314 476H520M314 482H520M314 488H520M314 494H520M314 500H520M314 506H520M314 512H520M314 518H520" stroke="#7E3E2B" stroke-width=".8" opacity=".35" fill="none"/>
+        <path d="M300 473 L336 442 L504 442 L534 473Z" fill="#4A5158"/>
+        <path d="M300 473 L534 473 L534 477 L300 477Z" fill="#3A4046"/>
+        <path data-op="0,0,1" opacity="0" d="M302 471 L337 439 L503 439 L532 471 L520 471 L499 446 L341 446 L314 471Z" fill="#FFFFFF"/>
         <!-- garage -->
-        <path d="M466 466 L515 446 L564 466Z" fill="#4A5158"/>
-        <path data-op="0,0,1" opacity="0" d="M464 464 L515 443 L566 464 L556 464 L515 449 L474 464Z" fill="#FFFFFF"/>
-        <rect x="474" y="466" width="82" height="56" data-fill="#F1EADA,#ECDDC2,#E9E2D2" fill="#F1EADA"/>
-        <rect x="484" y="478" width="62" height="44" fill="#E3DDCF"/>
-        <g stroke="#CBC4B4" stroke-width="1.5"><path d="M484 489H546M484 500H546M484 511H546"/></g>
-        <!-- hedges and beds -->
-        <g data-fill="#3F7A2E,#8C6A2A,#E8EEF3" fill="#3F7A2E"><ellipse cx="346" cy="522" rx="24" ry="9"/><ellipse cx="372" cy="523" rx="16" ry="7"/><ellipse cx="430" cy="523" rx="16" ry="7"/><ellipse cx="456" cy="522" rx="22" ry="9"/></g>
-        <g data-op="1,0,0" fill="#F2A7B5"><circle cx="336" cy="518" r="2.4"/><circle cx="350" cy="515" r="2.4"/><circle cx="362" cy="519" r="2.4"/><circle cx="446" cy="517" r="2.4"/><circle cx="460" cy="519" r="2.4"/></g>
-        <g data-op="1,0,0" fill="#F6D25B"><circle cx="343" cy="520" r="2"/><circle cx="356" cy="521" r="2"/><circle cx="452" cy="520" r="2"/><circle cx="466" cy="517" r="2"/></g>
-        <g data-op="0,1,0" fill="#C9561F"><circle cx="340" cy="517" r="3"/><circle cx="452" cy="517" r="3"/><circle cx="465" cy="519" r="2.6"/></g>
-        <g class="bulbs" data-roof="316,434 400,384 484,434 M466,466 515,446 564,466"></g>
+        <rect x="520" y="482" width="72" height="40" data-fill="#ECE5D4,#E8DCC4,#E6E1D6" fill="#ECE5D4"/>
+        <path d="M512 485 L532 466 L584 466 L600 485Z" fill="#4A5158"/>
+        <path data-op="0,0,1" opacity="0" d="M513 483 L533 463 L583 463 L598 483 L588 483 L580 470 L536 470 L524 483Z" fill="#FFFFFF"/>
+        <rect x="529" y="491" width="54" height="31" fill="#E0D9CA"/>
+        <path d="M529 499H583M529 507H583M529 515H583" stroke="#C9C1B1" stroke-width="1.2"/>
+        <!-- picture window -->
+        <rect x="326" y="480" width="78" height="30" fill="#F2EDE2"/>
+        <rect x="330" y="484" width="70" height="22" data-fill="#6F93A1,#F3C46B,#F6C766" fill="#6F93A1"/>
+        <path d="M353 484V506M377 484V506" stroke="#F2EDE2" stroke-width="2.4"/>
+        <path d="M334 487 L346 487 L338 503 L334 503Z" fill="#FFFFFF" opacity=".25"/>
+        <!-- side window -->
+        <rect x="462" y="482" width="42" height="22" fill="#F2EDE2"/>
+        <rect x="465" y="485" width="36" height="16" data-fill="#6F93A1,#F3C46B,#F6C766" fill="#6F93A1"/>
+        <path d="M483 485V501" stroke="#F2EDE2" stroke-width="2"/>
+        <!-- door, aluminum awning, stoop, iron rail -->
+        <rect x="419" y="486" width="18" height="36" fill="#1B4D2E"/>
+        <circle cx="433" cy="505" r="1.1" fill="#D9A441"/>
+        <path d="M410 478 L446 478 L450 487 L406 487Z" fill="#F1EEE6"/>
+        <path d="M414 478 L418 478 L416 487 L411 487Z M424 478 L428 478 L427 487 L422 487Z M434 478 L438 478 L438 487 L433 487Z M444 478 L446 478 L450 487 L444 487Z" fill="#1B4D2E"/>
+        <rect x="408" y="522" width="40" height="5" fill="#CFC9BE"/>
+        <path d="M410 523 V510 H419 M446 523 V510 H437 M410 516 H419 M446 516 H437" stroke="#1E1E1E" stroke-width="1.2" fill="none"/>
+        <g data-op="0,0,1" opacity="0"><circle cx="428" cy="497" r="5.5" fill="none" stroke="#2F6B2A" stroke-width="3"/><circle cx="428" cy="491.5" r="1.6" fill="#C0392B"/></g>
+        <!-- hedges, flowers, mums -->
+        <g data-fill="#3F7A2E,#8C6A2A,#E8EEF3" fill="#3F7A2E"><ellipse cx="336" cy="522" rx="18" ry="8"/><ellipse cx="360" cy="523" rx="14" ry="7"/><ellipse cx="386" cy="523" rx="14" ry="7"/><ellipse cx="470" cy="523" rx="16" ry="7"/><ellipse cx="496" cy="522" rx="18" ry="8"/></g>
+        <g data-op="1,0,0" fill="#F2A7B5"><circle cx="330" cy="517" r="2.2"/><circle cx="344" cy="515" r="2.2"/><circle cx="364" cy="518" r="2.2"/><circle cx="476" cy="517" r="2.2"/><circle cx="492" cy="515" r="2.2"/></g>
+        <g data-op="1,0,0" fill="#F6D25B"><circle cx="352" cy="520" r="1.9"/><circle cx="382" cy="519" r="1.9"/><circle cx="484" cy="520" r="1.9"/></g>
+        <g data-op="0,1,0" fill="#C9561F"><circle cx="404" cy="520" r="3.2"/><circle cx="452" cy="520" r="3.2"/><circle cx="458" cy="521" r="2.6"/></g>
+        <g class="bulbs" data-roof="300,473 336,442 504,442 534,473 M512,485 532,466 584,466 600,485"></g>
       </g>
 
       <!-- lawn -->
-      <path d="M-300 518 C 100 512 600 512 1300 518 L1300 604 L-300 604Z" fill="url(#grass)"/>
+      <path d="M-300 518 C 100 512 600 512 1300 518 L1300 604 L-300 604Z" data-fill="#5C9C3C,#93843F,#EEF2F6" fill="#5C9C3C"/>
       <g id="stripes" clip-path="url(#mow)"><g clip-path="url(#lawnClip)" id="stripeSet"></g></g>
       <g id="groundLeaves"></g>
       <g data-op="0,0,1" opacity="0" fill="#FFFFFF"><ellipse cx="120" cy="560" rx="160" ry="12"/><ellipse cx="760" cy="572" rx="200" ry="14"/></g>
 
       <!-- driveway, walk, sidewalk, street -->
-      <path d="M484 522 L548 522 L576 600 L462 600Z" data-fill="#D2CEC5,#CBC4B6,#BCC1C7" fill="#D2CEC5"/>
-      <path d="M392 522 L408 522 L412 600 L388 600Z" data-fill="#D2CEC5,#CBC4B6,#BCC1C7" fill="#D2CEC5"/>
-      <g data-op="0,0,1" opacity="0" fill="#FFFFFF"><path d="M472 522 L484 522 L462 600 L444 600Z"/><path d="M548 522 L560 522 L594 600 L576 600Z"/></g>
+      <path d="M529 522 L583 522 L608 600 L510 600Z" data-fill="#D2CEC5,#CBC4B6,#BCC1C7" fill="#D2CEC5"/>
+      <path d="M420 527 L436 527 L442 600 L414 600Z" data-fill="#D2CEC5,#CBC4B6,#BCC1C7" fill="#D2CEC5"/>
+      <g data-op="0,0,1" opacity="0" fill="#FFFFFF"><path d="M517 522 L529 522 L510 600 L492 600Z"/><path d="M583 522 L595 522 L626 600 L608 600Z"/></g>
       <rect x="-300" y="600" width="1600" height="16" data-fill="#D8D4CB,#D1CABD,#C3C8CE" fill="#D8D4CB"/>
       <g stroke="#BDB8AD" stroke-width="1"><path d="M40 600v16M120 600v16M200 600v16M280 600v16M360 600v16M600 600v16M680 600v16M760 600v16M840 600v16M920 600v16"/></g>
       <rect x="-300" y="616" width="1600" height="6" fill="#ABA79E"/>
-      <rect x="-300" y="622" width="1600" height="90" fill="url(#road)"/>
+      <rect x="-300" y="622" width="1600" height="90" fill="#62676B"/>
       <rect data-op="0,0,1" opacity="0" x="-300" y="622" width="1600" height="90" fill="#8C96A0" fill-opacity=".45"/>
       <g data-op="0,0,1" opacity="0" fill="#FFFFFF"><path d="M-300 600 C -100 590 100 590 300 600 L 300 604 L -300 604Z"/><path d="M-20 626 Q40 606 110 610 Q190 598 260 612 Q330 606 380 626Z"/><path d="M700 626 Q760 608 830 611 Q900 600 980 612 Q1040 608 1080 626Z"/></g>
+
+
+      <!-- a brother at work: mowing in summer, raking in fall, snowblowing in winter -->
+      <g id="crew">
+        <g data-op="1,0,0" transform="translate(-72 0)">
+          <path d="M414 580 L440 579 L441 588 L413 589Z" fill="#C8372D"/><rect x="420" y="573" width="12" height="7" rx="1" fill="#2B2B2B"/>
+          <circle cx="417" cy="589" r="3" fill="#23272A"/><circle cx="437" cy="589" r="3" fill="#23272A"/>
+          <path d="M440 581 L447 567" stroke="#2B2B2B" stroke-width="1.6" stroke-linecap="round"/>
+          <g transform="translate(456 590)">
+          <path d="M1 -16 L6 -16 L8 0 L3 0Z M-4 -16 L1 -16 L-2 0 L-7 0Z" fill="#2F4A6B"/>
+          <path d="M-8 -1.5 h6 v2.5 h-6Z M3 -1.5 h6 v2.5 h-6Z" fill="#2B2B2B"/>
+          <path d="M-6 -31 L6 -31 L7 -15 L-6.5 -15Z" data-fill="#EEE7D7,#EEE7D7,#2E5E3E" fill="#EEE7D7"/>
+          <circle cx="-2.6" cy="-27" r="1.3" fill="#2F7A35"/>
+          <path d="M-4 -29 L-9 -22" stroke="#EEE7D7" stroke-width="3.4" stroke-linecap="round"/><circle cx="-9.5" cy="-21.5" r="1.8" fill="#D9A27E"/>
+          <circle cy="-35.5" r="4.6" fill="#D9A27E"/>
+          <path d="M-4.9 -36.4 Q0 -43 4.9 -36.4Z M-4.9 -36.6 L-9.5 -35.4 L-4.6 -35.2Z" fill="#1B4D2E"/>
+        </g>
+        </g>
+        <g data-op="0,1,0" opacity="0" transform="translate(40 0)">
+          <path d="M398 592 Q404 578 416 580 Q426 576 432 590Z" fill="#C9561F"/><path d="M404 592 Q410 584 420 585 Q428 584 430 592Z" fill="#E1912E"/>
+          <path d="M452 566 L428 592" stroke="#8B6A42" stroke-width="1.6" stroke-linecap="round"/><path d="M422 590 L434 594 M424 588 L423 593 M427 589 L426 594 M430 590 L429 595" stroke="#5A5A5A" stroke-width="1.2" stroke-linecap="round"/>
+          <g transform="translate(460 594)">
+          <path d="M1 -16 L6 -16 L8 0 L3 0Z M-4 -16 L1 -16 L-2 0 L-7 0Z" fill="#2F4A6B"/>
+          <path d="M-8 -1.5 h6 v2.5 h-6Z M3 -1.5 h6 v2.5 h-6Z" fill="#2B2B2B"/>
+          <path d="M-6 -31 L6 -31 L7 -15 L-6.5 -15Z" data-fill="#EEE7D7,#EEE7D7,#2E5E3E" fill="#EEE7D7"/>
+          <circle cx="-2.6" cy="-27" r="1.3" fill="#2F7A35"/>
+          <path d="M-3 -29 L-8 -24 M-5 -26 L-10 -21" stroke="#EEE7D7" stroke-width="3.2" stroke-linecap="round"/><circle cx="-9" cy="-23" r="1.7" fill="#D9A27E"/>
+          <circle cy="-35.5" r="4.6" fill="#D9A27E"/>
+          <path d="M-4.9 -36.4 Q0 -43 4.9 -36.4Z M-4.9 -36.6 L-9.5 -35.4 L-4.6 -35.2Z" fill="#1B4D2E"/>
+        </g>
+        </g>
+        <g data-op="0,0,1" opacity="0">
+          <path d="M531 582 Q546 560 568 566" stroke="#FFFFFF" stroke-width="5" fill="none" stroke-linecap="round" opacity=".85"/>
+          <g fill="#FFFFFF"><circle cx="560" cy="560" r="2"/><circle cx="572" cy="566" r="1.6"/><circle cx="566" cy="556" r="1.4"/><circle cx="578" cy="571" r="1.6"/></g>
+          <path d="M530 594 L530 580 Q530 576 536 576 L546 576 L546 594Z" fill="#C8372D"/><rect x="546" y="582" width="12" height="10" rx="1.5" fill="#B5302A"/>
+          <path d="M536 576 L534 566 L540 563" stroke="#2B2B2B" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+          <circle cx="552" cy="595" r="3.4" fill="#23272A"/>
+          <path d="M558 584 L566 571" stroke="#2B2B2B" stroke-width="1.6" stroke-linecap="round"/>
+          <g transform="translate(574 597)">
+          <path d="M1 -16 L6 -16 L8 0 L3 0Z M-4 -16 L1 -16 L-2 0 L-7 0Z" fill="#2F4A6B"/>
+          <path d="M-8 -1.5 h6 v2.5 h-6Z M3 -1.5 h6 v2.5 h-6Z" fill="#2B2B2B"/>
+          <path d="M-6 -31 L6 -31 L7 -15 L-6.5 -15Z" data-fill="#EEE7D7,#EEE7D7,#2E5E3E" fill="#EEE7D7"/>
+          <circle cx="-2.6" cy="-27" r="1.3" fill="#2F7A35"/>
+          <path d="M-4 -29 L-8 -25" stroke="#2E5E3E" stroke-width="3.4" stroke-linecap="round"/><circle cx="-8.3" cy="-24.6" r="1.8" fill="#D9A27E"/>
+          <circle cy="-35.5" r="4.6" fill="#D9A27E"/>
+          <path d="M-4.9 -36.4 Q0 -43 4.9 -36.4Z M-4.9 -36.6 L-9.5 -35.4 L-4.6 -35.2Z" fill="#1B4D2E"/>
+        </g>
+        </g>
+      </g>
 
       <!-- leaf piles at the curb for city pickup -->
       <g data-op="0,1,0" opacity="0">
@@ -450,7 +518,7 @@
   <a class="textus" id="barSee" href="spring-summer.html">See prices</a>
   <a class="callnow" href="tel:+17344502400">Call now<small>Booking now</small></a>
 </nav>
-<script src="js/site.js?v=10"></script>
+<script src="js/site.js?v=11"></script>
 <script src="js/book.js?v=8"></script>
 </body>
 </html>
