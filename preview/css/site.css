@@ -460,3 +460,10 @@ html:has(.detail){scroll-behavior:smooth}
 .lights .promises,.snow .promises{margin-top:26px}
 .snow .ptable{margin-top:28px}
 @media (max-width:819px){.twin{grid-template-columns:minmax(0,1fr);gap:16px}.twin-card{padding:20px}.twin-card .from b{font-size:40px}}
+
+/* service name leads; the promise sits under it */
+.content h1,.content h2{font-size:clamp(36px,3.7vw,54px);line-height:1}
+.tagline{font-family:var(--display);font-weight:700;font-size:clamp(19px,1.6vw,22px);line-height:1.25;color:var(--brand);margin:-4px 0 0;text-wrap:balance}
+.fall .tagline{color:#8A3A16}
+.winter .tagline{color:var(--frost)}
+@media (max-width:819px){.content h1,.content h2{font-size:clamp(32px,9vw,40px)}.tagline{font-size:18px}.content .lede{display:none}.dhero .content .lede{display:block}}
