@@ -309,7 +309,12 @@
       }
       ctx.globalAlpha = 1;
     }
-    requestAnimationFrame(frame);
+    if (onScreen && !reduce) requestAnimationFrame(frame); else running = false;
   };
-  requestAnimationFrame(frame);
+  // only animate while the scene is on screen; with reduced motion, draw once per scroll or resize
+  let running = false, onScreen = true;
+  const wake = () => { if (running || !onScreen) return; running = true; last = performance.now(); requestAnimationFrame(frame); };
+  if ('IntersectionObserver' in window) new IntersectionObserver(es => { onScreen = es[0].isIntersecting; wake(); }).observe(track);
+  addEventListener('scroll', wake, { passive: true }); addEventListener('resize', wake);
+  wake();
 })();
