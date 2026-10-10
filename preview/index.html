@@ -1,0 +1,307 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Mangiapane Brothers Lawn and Snow · Livonia and Westland, Michigan</title>
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Public+Sans:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="css/site.css">
+</head>
+<body>
+<header class="hdr">
+  <img src="img/logo.png" alt="Mangiapane Brothers Lawn and Snow LLC">
+  <nav class="nav" aria-label="Seasons">
+    <a href="#summer" data-go="0" aria-current="true">Spring and summer</a>
+    <a href="#fall" data-go="1">Fall</a>
+    <a href="#winter" data-go="2">Winter</a>
+    <a href="#story">Our story</a>
+  </nav>
+  <a class="btn call" href="tel:+17344502400">Call (734) 450-2400</a>
+  <a class="call-icon" href="tel:+17344502400" aria-label="Call (734) 450-2400">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
+  </a>
+</header>
+
+<main>
+<section class="track" id="track" aria-label="Services by season">
+  <span id="summer" style="position:absolute;top:0"></span>
+  <span id="fall" style="position:absolute;top:49%"></span>
+  <span id="winter" style="position:absolute;top:93%"></span>
+  <div class="stage" id="stage">
+    <svg class="scene" viewBox="0 0 1000 700" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
+      <defs>
+        <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop id="skyTop" offset="0" stop-color="#A9D4E6"/><stop id="skyBot" offset=".75" stop-color="#E8F3EC"/></linearGradient>
+        <radialGradient id="sunG"><stop id="sunCore" offset=".3" stop-color="#FFF7D6"/><stop id="sunHalo" offset="1" stop-color="#FFF7D6" stop-opacity="0"/></radialGradient>
+        <linearGradient id="grass" x1="0" y1="0" x2="0" y2="1"><stop id="gTop" offset="0" stop-color="#5C9A3C"/><stop id="gBot" offset="1" stop-color="#3D772A"/></linearGradient>
+        <clipPath id="mow"><rect id="mowRect" x="-300" y="0" width="0" height="700"/></clipPath>
+      </defs>
+      <rect width="1000" height="700" fill="url(#sky)"/>
+      <circle id="sun" cx="700" cy="170" r="160" fill="url(#sunG)"/>
+      <g id="clouds" fill="#FFFFFF" opacity=".8">
+        <g id="cloud1"><ellipse cx="160" cy="190" rx="78" ry="20"/><ellipse cx="196" cy="174" rx="44" ry="25"/><ellipse cx="140" cy="180" rx="32" ry="17"/></g>
+        <g id="cloud2"><ellipse cx="560" cy="120" rx="58" ry="15"/><ellipse cx="586" cy="108" rx="33" ry="18"/></g>
+      </g>
+      <g id="pFar">
+        <path id="hillFar" d="M-300 468 C 40 392 240 420 420 436 C 600 452 780 384 1300 426 L1300 700 L-300 700Z" fill="#A4CA95"/>
+        <g id="bushes" fill="#8DB97C"><ellipse cx="80" cy="452" rx="46" ry="30"/><ellipse cx="130" cy="446" rx="36" ry="26"/><ellipse cx="820" cy="430" rx="52" ry="32"/><ellipse cx="870" cy="440" rx="38" ry="24"/></g>
+      </g>
+      <g id="pHouse"><g transform="translate(345 418) scale(.92)">
+        <rect x="112" y="-4" width="16" height="34" fill="#7B4A3A"/>
+        <path d="M-10 36 L74 -8 L158 36 Z" fill="#4C535A"/>
+        <path id="roofSnow" d="M-12 34 L74 -10 L160 34 L150 34 L74 -2 L-2 34Z" fill="#FFFFFF" opacity="0"/>
+        <rect id="chimSnow" x="110" y="-8" width="20" height="6" rx="3" fill="#FFFFFF" opacity="0"/>
+        <rect id="wall" x="0" y="36" width="148" height="88" fill="#F0E9D8"/>
+        <rect x="0" y="36" width="148" height="6" fill="#000000" opacity=".08"/>
+        <g id="wins" fill="#6F8E9A"><rect x="16" y="50" width="20" height="24"/><rect x="64" y="50" width="20" height="24"/><rect x="112" y="50" width="20" height="24"/><rect x="16" y="88" width="20" height="24"/><rect x="112" y="88" width="20" height="24"/></g>
+        <g fill="#F7F3E9"><rect x="14" y="48" width="24" height="2"/><rect x="62" y="48" width="24" height="2"/><rect x="110" y="48" width="24" height="2"/></g>
+        <rect x="64" y="86" width="20" height="38" fill="#1B4D2E"/>
+        <path d="M56 86 L74 77 L92 86Z" fill="#4C535A"/>
+        <g id="wreath" opacity="0"><circle cx="74" cy="98" r="5.5" fill="none" stroke="#2F6B2A" stroke-width="3"/><circle cx="74" cy="92.5" r="1.6" fill="#C0392B"/></g>
+        <g id="shrubs" fill="#4F8A37"><ellipse cx="22" cy="126" rx="26" ry="9"/><ellipse cx="126" cy="126" rx="26" ry="9"/></g>
+        <g id="lights"></g>
+      </g></g>
+      <g id="pNear"><path id="hillNear" d="M-300 522 C 100 478 360 504 560 504 C 760 504 920 476 1300 498 L1300 700 L-300 700Z" fill="#79AE63"/></g>
+      <g id="fence"></g>
+      <path d="M-300 548 C 200 532 700 532 1300 544 L1300 700 L-300 700Z" fill="url(#grass)"/>
+      <g id="stripes" clip-path="url(#mow)"></g>
+      <g id="groundLeaves"></g>
+      <g id="drifts" fill="#FFFFFF" opacity="0"><ellipse cx="80" cy="560" rx="160" ry="16"/><ellipse cx="520" cy="600" rx="220" ry="20"/><ellipse cx="900" cy="575" rx="190" ry="14"/><ellipse cx="300" cy="660" rx="260" ry="24"/></g>
+    </svg>
+
+    <div class="treewrap" id="tree" aria-hidden="true"><canvas id="treeCv"></canvas></div>
+    <canvas id="fx" aria-hidden="true"></canvas>
+    <div class="grain" aria-hidden="true"></div>
+
+    <div class="content right summer on" id="c0">
+      <p class="eyebrow">Spring and summer &middot; Lawn care</p>
+      <h1>Clean stripes. Sharp edges. Same crew every week.</h1>
+      <p class="lede">Weekly or biweekly mowing and edging across Livonia and Westland.</p>
+      <div class="ctas">
+        <a class="btn call" href="tel:+17344502400">Call (734) 450-2400</a>
+        <a class="btn text" href="sms:+17344502400?&amp;body=Hi%2C%20I%20would%20like%20a%20quote%20for%20lawn%20care%20at%20">Text for a quote</a>
+      </div>
+      <div class="panel">
+        <div class="row"><p class="svc">Lawn Mowing and Edging</p><p class="price">From $55 a cut</p></div>
+        <div class="divider extra"></div>
+        <div class="row extra"><p class="svc">Spring Cleanup &middot; Landscaping</p><p class="price">Quoted by phone</p></div>
+        <div class="row"><a class="more" href="#summer-details">See everything we do in spring and summer</a></div>
+        <p class="trust extra">Family owned since 2019 &middot; Livonia and Westland &middot; Fully insured</p>
+      </div>
+    </div>
+
+    <div class="content left fall" id="c1" style="opacity:0">
+      <p class="eyebrow">Fall &middot; Cleanup</p>
+      <h2>Two leaf visits, timed to your city pickup.</h2>
+      <p class="lede">Gutters cleared on your final visit. Beds, sticks, and branches to the curb.</p>
+      <div class="ctas">
+        <a class="btn call" href="tel:+17344502400">Call (734) 450-2400</a>
+        <a class="btn text" href="sms:+17344502400?&amp;body=Hi%2C%20I%20would%20like%20a%20quote%20for%20a%20fall%20cleanup%20at%20">Text for a quote</a>
+      </div>
+      <div class="panel">
+        <div class="row"><p class="svc">Full Fall Cleanup</p><p class="price">From $435 for the season</p></div>
+        <p class="note extra">Free gutter cleaning, included with every Full Fall Cleanup.</p>
+        <div class="row"><a class="more" href="#fall-details">See everything included and prices by neighborhood</a></div>
+        <p class="trust extra">Family owned since 2019 &middot; Livonia and Westland &middot; Fully insured</p>
+      </div>
+    </div>
+
+    <div class="content right winter" id="c2" style="opacity:0">
+      <p class="eyebrow">Winter &middot; Snow and lights</p>
+      <h2>Cleared within 24 hours. Never before 7 a.m.</h2>
+      <p class="lede">One season price, a capped total, and a time-stamped photo after every visit.</p>
+      <div class="ctas">
+        <a class="btn call" href="tel:+17344502400">Call (734) 450-2400</a>
+        <a class="btn text" href="sms:+17344502400?&amp;body=Hi%2C%20I%20would%20like%20a%20quote%20for%20snow%20removal%20at%20">Text for a quote</a>
+      </div>
+      <div class="panel">
+        <div class="row"><p class="svc">Snow Removal</p><p class="price">From $550 for the season</p></div>
+        <p class="note extra">Never more than $950 in Rosedale Gardens, however hard the winter.</p>
+        <div class="divider extra"></div>
+        <div class="row extra"><p class="svc">Christmas Lights</p><p class="price">From $625</p></div>
+        <div class="row"><a class="more" href="#winter-details">See full snow and lights prices</a></div>
+        <p class="trust extra">Family owned since 2019 &middot; Livonia and Westland &middot; Fully insured</p>
+      </div>
+    </div>
+
+    <nav class="dots" aria-label="Jump to a season">
+      <a href="#summer" data-go="0" aria-current="true" aria-label="Spring and summer"></a>
+      <a href="#fall" data-go="1" aria-label="Fall"></a>
+      <a href="#winter" data-go="2" aria-label="Winter"></a>
+    </nav>
+
+    <a class="peek p-fall on" href="#fall" data-go="1" id="k0">
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M3 6l5 5 5-5"/></svg>
+      Next &middot; Fall cleanup
+    </a>
+    <a class="peek p-winter" href="#winter" data-go="2" id="k1" tabindex="-1">
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M3 6l5 5 5-5"/></svg>
+      Next &middot; Snow and lights
+    </a>
+    <a class="peek p-story" href="#story" id="k2" tabindex="-1">
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M3 6l5 5 5-5"/></svg>
+      Next &middot; Our story
+    </a>
+  </div>
+</section>
+
+<section class="sec story-sec" id="story" aria-labelledby="story-h">
+  <div class="wrap story-grid">
+    <img src="img/brothers.jpg" alt="The three Mangiapane brothers in matching tree-logo shirts on a summer lawn" width="1200" height="719" loading="lazy">
+    <div class="stack">
+      <p class="eyebrow">Our story</p>
+      <h2 class="title" id="story-h">Livonia is home.</h2>
+      <p class="body">Mangiapane Brothers started the way most family businesses do: a few brothers, a mower, and neighbors who needed the work done right. Livonia is home. The houses we service are the houses we grew up around.</p>
+      <p class="body">We provide full-service property maintenance for those who take pride in their home. Lawn, snow, cleanups, gutters, and landscaping, all from one company that answers its own phone.</p>
+      <p class="body">Every crew is trained and managed by us, and every job is held to the standard we would want on our own homes. When we say we will be there, we are there.</p>
+    </div>
+  </div>
+</section>
+
+<section class="sec why" aria-labelledby="why-h">
+  <div class="wrap">
+    <p class="eyebrow">Why us</p>
+    <h2 class="title" id="why-h">Why homeowners keep us.</h2>
+    <div class="why-grid">
+      <div class="why-item">
+        <span class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1B4D2E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M16 3v4M8 3v4M3 10h18M9 15l2 2 4-4"/></svg></span>
+        <h3>We show up.</h3>
+        <p>Same crew, same day, every week. You never have to chase us.</p>
+      </div>
+      <div class="why-item">
+        <span class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1B4D2E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6z"/><path d="M9 12l2 2 4-4"/></svg></span>
+        <h3>Done right.</h3>
+        <p>Every crew is trained and managed by us and held to the standard we would want on our own homes.</p>
+      </div>
+      <div class="why-item">
+        <span class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1B4D2E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3h12v18l-3-2-3 2-3-2-3 2z"/><path d="M9 8h6M9 12h6M9 16h3"/></svg></span>
+        <h3>Prices in writing.</h3>
+        <p>Starting prices are listed on this page, and every quote is given before any work begins.</p>
+      </div>
+      <div class="why-item">
+        <span class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1B4D2E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21V11"/><path d="M12 11c-4 0-7-2.5-7-6 3.5 0 7 2 7 6zM12 11c4 0 7-2.5 7-6-3.5 0-7 2-7 6z"/><path d="M5 21h14"/></svg></span>
+        <h3>One company, every season.</h3>
+        <p>Lawn in summer, leaves in fall, snow and lights in winter, from one company that answers its own phone.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec work" aria-labelledby="work-h">
+  <div class="wrap">
+    <p class="eyebrow">Recent work</p>
+    <h2 class="title" id="work-h">Before and after, on streets near you.</h2>
+    <div class="work-row">
+      <figure>
+        <div class="ba"><img src="img/work/front-yard-before.jpg" alt="Front yard before cleanup" loading="lazy"><img class="aft" src="img/work/front-yard-after.jpg" alt="Front yard after cleanup" loading="lazy">
+          <span class="lab b">Before</span><span class="lab a">After</span>
+          <input type="range" min="0" max="100" value="50" aria-label="Compare before and after: front yard cleanup"><span class="handle"></span></div>
+        <figcaption>Front yard cleanup</figcaption>
+      </figure>
+      <figure>
+        <div class="ba"><img src="img/work/hedge-side-before.jpg" alt="Side yard shrubs before trimming" loading="lazy"><img class="aft" src="img/work/hedge-side-after.jpg" alt="Side yard shrubs after trimming" loading="lazy">
+          <span class="lab b">Before</span><span class="lab a">After</span>
+          <input type="range" min="0" max="100" value="50" aria-label="Compare before and after: shrub trimming"><span class="handle"></span></div>
+        <figcaption>Shrub trimming and edging</figcaption>
+      </figure>
+      <figure>
+        <div class="ba"><img src="img/work/bed-cleanup-before.jpg" alt="Overgrown bed before clearing" loading="lazy"><img class="aft" src="img/work/bed-cleanup-after.jpg" alt="Bed after clearing, with rock installed" loading="lazy">
+          <span class="lab b">Before</span><span class="lab a">After</span>
+          <input type="range" min="0" max="100" value="50" aria-label="Compare before and after: bed cleared and rock installed"><span class="handle"></span></div>
+        <figcaption>Overgrown bed cleared, rock installed</figcaption>
+      </figure>
+      <figure>
+        <div class="ba"><img src="img/work/porch-bed-before.jpg" alt="Porch bed before refresh" loading="lazy"><img class="aft" src="img/work/porch-bed-after.jpg" alt="Porch bed after refresh" loading="lazy">
+          <span class="lab b">Before</span><span class="lab a">After</span>
+          <input type="range" min="0" max="100" value="50" aria-label="Compare before and after: porch bed refresh"><span class="handle"></span></div>
+        <figcaption>Porch bed refresh</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section class="sec area" id="area" aria-labelledby="area-h">
+  <div class="wrap area-grid">
+    <div class="stack">
+      <p class="eyebrow">Service area</p>
+      <h2 class="title" id="area-h">Livonia and Westland, street by street.</h2>
+      <p class="body">We work where we live. Routes run through Rosedale Gardens, North Livonia around Newburgh and 7 Mile, and Westland. Snow and Christmas lights are booked in Rosedale Gardens and North Livonia.</p>
+      <ul class="chips" aria-label="Neighborhoods">
+        <li class="core">Rosedale Gardens</li><li class="core">North Livonia</li><li class="core">Westland</li>
+        <li>Garden City</li><li>Canton</li><li>Dearborn</li><li>Dearborn Heights</li>
+      </ul>
+    </div>
+    <svg class="map" viewBox="0 0 520 420" role="img" aria-label="Simple map of Livonia and Westland showing the North Livonia and Rosedale Gardens routes">
+      <rect x="40" y="30" width="440" height="300" rx="6" fill="#EAF0E4" stroke="#C9D3C0" stroke-width="1.5"/>
+      <rect x="40" y="330" width="440" height="66" rx="6" fill="#F0ECE0" stroke="#D8D1BE" stroke-width="1.5"/>
+      <g stroke="#FFFFFF" stroke-width="5" stroke-linecap="round">
+        <path d="M40 80H480M40 130H480M40 180H480M40 230H480M40 272H480M40 330H480M40 390H480"/>
+        <path d="M80 30V396M150 30V396M220 30V396M290 30V396M360 30V396M430 30V396"/>
+      </g>
+      <ellipse cx="110" cy="86" rx="72" ry="44" fill="#1B4D2E" fill-opacity=".16" stroke="#1B4D2E" stroke-width="2"/>
+      <ellipse cx="326" cy="282" rx="58" ry="32" fill="#9A3D14" fill-opacity=".14" stroke="#9A3D14" stroke-width="2"/>
+      <g font-family="Public Sans, sans-serif" font-size="11" fill="#6B6B65">
+        <text x="474" y="75" text-anchor="end">7 Mile</text><text x="474" y="267" text-anchor="end">Plymouth Rd</text><text x="474" y="325" text-anchor="end">Joy Rd</text>
+        <text x="62" y="410">Newburgh</text><text x="270" y="410">Merriman</text>
+      </g>
+      <g font-family="Montserrat, sans-serif" font-weight="700" font-size="13">
+        <text x="112" y="80" text-anchor="middle" fill="#1B4D2E">North Livonia</text>
+        <text x="112" y="96" text-anchor="middle" fill="#1B4D2E" font-size="10.5" font-weight="600">Newburgh and 7 Mile</text>
+        <text x="326" y="286" text-anchor="middle" fill="#7E3210">Rosedale Gardens</text>
+        <text x="260" y="168" text-anchor="middle" fill="#55554F" font-size="15">Livonia</text>
+        <text x="260" y="366" text-anchor="middle" fill="#55554F" font-size="15">Westland</text>
+      </g>
+      <text x="474" y="48" text-anchor="end" font-family="Public Sans, sans-serif" font-size="10" fill="#8A8A82">Not to scale</text>
+    </svg>
+  </div>
+</section>
+
+<section class="sec cta" id="call" aria-labelledby="cta-h">
+  <div class="wrap">
+    <div>
+      <h2 class="title" id="cta-h">Ready when you are.</h2>
+      <p>Call or text for a quote. Most homes are priced in one call.</p>
+    </div>
+    <div class="cta-btns" style="display: flex; flex-wrap: wrap; gap: 10px">
+      <a class="btn light" href="tel:+17344502400">Call (734) 450-2400</a>
+      <a class="btn ghost" href="sms:+17344502400?&amp;body=Hi%2C%20I%20would%20like%20a%20quote%20at%20">Text for a quote</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div>
+      <img src="img/logo-white.png" alt="Mangiapane Brothers Lawn and Snow LLC" width="360" height="128">
+      <p class="tag">Reliable Service. Uncompromising Standards.</p>
+    </div>
+    <div>
+      <h3>Contact</h3>
+      <ul>
+        <li><a href="tel:+17344502400">(734) 450-2400</a> &middot; call or text</li>
+        <li><a href="mailto:admin@mangbrothers.com">admin@mangbrothers.com</a></li>
+        <li>Livonia and Westland, Michigan</li>
+      </ul>
+    </div>
+    <div>
+      <h3>Seasons</h3>
+      <ul>
+        <li><a href="#summer" data-go="0">Spring and summer</a></li>
+        <li><a href="#fall" data-go="1">Fall</a></li>
+        <li><a href="#winter" data-go="2">Winter</a></li>
+      </ul>
+    </div>
+    <p class="legal">&copy; 2026 Mangiapane Brothers Lawn and Snow LLC</p>
+  </div>
+</footer>
+
+<nav class="bar" aria-label="Contact">
+  <a class="textus" href="sms:+17344502400">Text us</a>
+  <a class="callnow" href="tel:+17344502400">Call now</a>
+</nav>
+<script src="js/site.js"></script>
+</body>
+</html>
