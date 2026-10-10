@@ -135,24 +135,62 @@
       <g transform="translate(96 0)"><rect x="596" y="572" width="4" height="34" fill="#4A3A2E"/><rect x="586" y="562" width="24" height="13" rx="6" fill="#2E3A33"/><rect x="606" y="560" width="2.5" height="9" fill="#C0392B"/><rect data-op="0,0,1" opacity="0" x="585" y="558" width="26" height="6" rx="3" fill="#FFFFFF"/></g>
       <g><rect x="938" y="520" width="5" height="96" fill="#3A4249"/><rect x="928" y="512" width="25" height="10" rx="3" fill="#3A4249"/><rect x="932" y="520" width="17" height="4" data-fill="#F4F1E6,#FFE3A8,#FFE7A8" fill="#F4F1E6"/></g>
 
-      <!-- the work truck and trailer -->
-      <g id="rig" transform="translate(-112 -136) scale(1.2)">
-        <rect x="372" y="652" width="96" height="10" rx="2" fill="#3B3F43"/>
-        <rect x="462" y="655" width="22" height="4" fill="#3B3F43"/>
-        <circle cx="420" cy="668" r="9" fill="#23272A"/><circle cx="420" cy="668" r="3.5" fill="#8A8F93"/>
-        <g data-op="1,0,0"><rect x="388" y="634" width="48" height="16" rx="3" fill="#2E6B2E"/><rect x="430" y="626" width="4" height="14" fill="#2B2B2B"/><rect x="420" y="622" width="22" height="5" rx="2" fill="#2B2B2B"/><circle cx="394" cy="650" r="4" fill="#23272A"/><circle cx="430" cy="650" r="4" fill="#23272A"/></g>
-        <g data-op="0,1,0" opacity="0"><rect x="384" y="632" width="30" height="20" rx="4" fill="#E8742A"/><rect x="418" y="630" width="30" height="22" rx="4" fill="#E8742A"/><path d="M432 630 Q436 610 452 604" stroke="#3B3F43" stroke-width="3" fill="none"/></g>
-        <g data-op="0,0,1" opacity="0"><rect x="392" y="628" width="44" height="18" rx="4" fill="#2E5E3E"/><circle cx="400" cy="648" r="5" fill="#23272A"/><circle cx="430" cy="648" r="5" fill="#23272A"/><path d="M376 628 L384 650 L380 650 L372 630Z" fill="#E8B53C"/></g>
-        <path d="M484 674 L484 640 Q486 628 500 626 L548 626 L566 604 L612 604 Q626 604 630 618 L640 640 L646 642 L646 674Z" fill="#F4F1E8"/>
-        <path d="M570 610 L608 610 Q616 610 620 620 L626 638 L562 638Z" fill="#9CC7DB"/>
-        <rect x="484" y="640" width="162" height="4" fill="#1B4D2E"/>
-        <circle cx="612" cy="657" r="10" fill="#FFFFFF" stroke="#1B4D2E" stroke-width="2"/>
-        <circle cx="612" cy="653" r="5.5" fill="#2F7A35"/><rect x="611" y="657" width="2" height="6" fill="#4A3426"/>
-        <text x="494" y="662" font-family="Public Sans, sans-serif" font-size="7.6" font-weight="700" fill="#1B4D2E" letter-spacing=".5">MANGIAPANE BROS.</text>
-        <circle cx="514" cy="676" r="12" fill="#23272A"/><circle cx="514" cy="676" r="4.5" fill="#8A8F93"/>
-        <circle cx="618" cy="676" r="12" fill="#23272A"/><circle cx="618" cy="676" r="4.5" fill="#8A8F93"/>
-        <rect x="640" y="648" width="8" height="5" rx="2" fill="#F6D27A"/>
-        <path data-op="0,0,1" opacity="0" d="M566 602 L612 602 Q624 602 628 610 L560 610Z" fill="#FFFFFF"/>
+      <!-- the work truck and trailer: compact white extended-cab pickup, open single-axle utility trailer -->
+      <g id="rig">
+        <ellipse cx="452" cy="679" rx="128" ry="3.5" fill="#000000" opacity=".18"/>
+        <!-- trailer -->
+        <path d="M462 665 L494 662 L494 666 L464 668Z" fill="#2E3236"/>
+        <circle cx="463" cy="665" r="2" fill="#6B7075"/>
+        <rect x="494" y="658" width="82" height="5" fill="#2E3236"/>
+        <rect x="494" y="650" width="82" height="2" fill="#3A3F44"/>
+        <g fill="#3A3F44"><rect x="494" y="650" width="2" height="9"/><rect x="520" y="650" width="2" height="9"/><rect x="548" y="650" width="2" height="9"/></g>
+        <path d="M568 660 L571 627 L583 629 L578 660Z" fill="none" stroke="#2E3236" stroke-width="1.8"/>
+        <g stroke="#2E3236" stroke-width=".8" opacity=".7"><path d="M570 650 L580 651M570.6 643 L581 644M571.2 636 L582 637M573 628 L571 660M576 628.6 L574.5 660M579.5 629 L577.5 660"/></g>
+        <g data-op="1,0,0">
+          <rect x="500" y="652" width="30" height="6" rx="1.5" fill="#B5302A"/>
+          <rect x="502" y="645" width="9" height="7" rx="1.5" fill="#D23B2F"/>
+          <rect x="511" y="641" width="12" height="11" rx="1.5" fill="#2B2B2B"/>
+          <path d="M524 650 L532 634 L537 634" stroke="#2B2B2B" stroke-width="2" fill="none" stroke-linecap="round"/>
+          <circle cx="504" cy="657" r="3" fill="#23272A"/><circle cx="528" cy="656" r="4" fill="#23272A"/>
+          <path d="M540 658 L547 646 L556 646 L556 658Z" fill="#C8372D"/><path d="M553 646 L560 632" stroke="#2B2B2B" stroke-width="1.6" stroke-linecap="round"/>
+          <path d="M562 658 L566 634" stroke="#3A3F44" stroke-width="1.4" stroke-linecap="round"/><rect x="560" y="654" width="5" height="4" rx="1" fill="#E8742A"/>
+        </g>
+        <g data-op="0,1,0" opacity="0">
+          <path d="M500 658 L501 640 L513 640 L514 658Z" fill="#C79A5B"/><path d="M501 640 L503 637 L511 637 L513 640Z" fill="#B08547"/>
+          <path d="M516 658 L517 642 L529 642 L530 658Z" fill="#D2A76A"/><path d="M517 642 L519 639 L527 639 L529 642Z" fill="#B08547"/>
+          <path d="M532 658 L533 640 L545 640 L546 658Z" fill="#C79A5B"/><path d="M533 640 L535 637 L543 637 L545 640Z" fill="#B08547"/>
+          <rect x="550" y="646" width="12" height="12" rx="3" fill="#E8742A"/><path d="M556 648 Q566 646 568 636" stroke="#3B3F43" stroke-width="2.4" fill="none" stroke-linecap="round"/>
+        </g>
+        <g data-op="0,0,1" opacity="0">
+          <path d="M500 658 L500 646 Q500 642 506 642 L512 642 L512 658Z" fill="#C8372D"/>
+          <rect x="512" y="646" width="14" height="10" rx="2" fill="#B5302A"/>
+          <path d="M506 642 L505 634 L510 632" stroke="#2B2B2B" stroke-width="2" fill="none" stroke-linecap="round"/>
+          <path d="M524 648 L532 634" stroke="#2B2B2B" stroke-width="2" stroke-linecap="round"/>
+          <circle cx="521" cy="657" r="3.5" fill="#23272A"/>
+          <rect x="538" y="650" width="16" height="8" rx="2" fill="#3E6FA3"/><rect x="540" y="643" width="14" height="7" rx="2" fill="#5584B8"/>
+          <path d="M499 642 Q512 637 534 640 L534 642 L499 644Z" fill="#FFFFFF"/>
+        </g>
+        <circle cx="537" cy="670" r="8" fill="#23272A"/><circle cx="537" cy="670" r="4" fill="#E9E9E6"/><circle cx="537" cy="670" r="1.4" fill="#8A8F93"/>
+        <path d="M526 663 Q537 652 548 663Z" fill="#2E3236"/>
+        <!-- truck -->
+        <path d="M331 667 L331 655 Q332 650 338 649 L366 646 L381 636 Q383 634.5 386 634.5 L416 634.5 Q419.5 634.5 419.8 638 L420.5 647 L462 647 Q464 647 464 649 L464 667 L452 667 A12 12 0 0 0 428 667 L364 667 A12 12 0 0 0 340 667Z" data-fill="#F4F2EC,#F2EEE4,#EEF1F4" fill="#F4F2EC"/>
+        <path d="M331 662 L464 662 L464 667 L452 667 A12 12 0 0 0 428 667 L364 667 A12 12 0 0 0 340 667 L331 667Z" fill="#000000" opacity=".07"/>
+        <path d="M369 646 L382.5 637.5 L397.5 637.5 L397.5 646Z" fill="#46565F"/>
+        <path d="M400.5 637.5 L414.5 637.5 Q416.5 637.5 416.6 640 L417 646 L400.5 646Z" fill="#46565F"/>
+        <path d="M372 645 L382 638.5 L386 638.5 L377 645Z" fill="#FFFFFF" opacity=".25"/>
+        <rect x="420" y="644.5" width="43" height="3" rx="1" fill="#2B2F33"/>
+        <g stroke="#CFCAC0" stroke-width=".9" fill="none"><path d="M368 646 L368 664M399 637.5 L399 664M420.5 647 L420.5 664M462 649 L462 664"/></g>
+        <rect x="391" y="649.5" width="5" height="1.6" rx=".8" fill="#2B2F33"/>
+        <rect x="364" y="642.5" width="4" height="4" rx="1" fill="#2B2F33"/>
+        <rect x="331" y="651.5" width="5" height="4" rx="1.5" fill="#F6D27A"/>
+        <rect x="460" y="649.5" width="4" height="7" rx="1" fill="#C0392B"/>
+        <rect x="328" y="661" width="7" height="6" rx="1.5" fill="#9BA0A4"/>
+        <rect x="461" y="662" width="6" height="5" rx="1.5" fill="#9BA0A4"/>
+        <circle cx="383" cy="656" r="5.6" fill="#FFFFFF" stroke="#1B4D2E" stroke-width="1.3"/>
+        <circle cx="383" cy="654" r="3.2" fill="#2F7A35"/><rect x="382.4" y="656.4" width="1.2" height="3" fill="#4A3426"/>
+        <circle cx="352" cy="667" r="10" fill="#23272A"/><circle cx="352" cy="667" r="5" fill="#C9CDD0"/><circle cx="352" cy="667" r="1.6" fill="#8A8F93"/>
+        <circle cx="440" cy="667" r="10" fill="#23272A"/><circle cx="440" cy="667" r="5" fill="#C9CDD0"/><circle cx="440" cy="667" r="1.6" fill="#8A8F93"/>
+        <g data-op="0,0,1" opacity="0" fill="#FFFFFF"><path d="M383 635 Q386 631 400 631.5 Q414 631 418 635Z"/><path d="M420 645 Q440 641 463 644.5Z"/><path d="M336 649 Q350 645 366 646.5 L338 650Z"/></g>
       </g>
     </svg>
 
