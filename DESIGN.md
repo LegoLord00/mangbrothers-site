@@ -19,6 +19,13 @@ colors:
   frost-soft: "#DCE8F1"
   lights-soft: "#F6DFDB"
   footer-night: "#13201A"
+  white: "#FFFFFF"
+  label-muted: "#6B6354"
+  leader-dot: "#C9BFAC"
+  on-green-text: "#D7E3D9"
+  footer-text: "#C9D2CB"
+  chip-paper: "#F1EBDD"
+  sky-summer: "#CFE6F0"
 typography:
   display:
     fontFamily: "Bitter, Georgia, 'Times New Roman', serif"
@@ -64,6 +71,7 @@ rounded:
   ticket: "18px"
   card: "20px"
   photo: "4px"
+  icon-tile: "12px"
 spacing:
   gutter-mobile: "14px"
   card-pad: "26px"
@@ -138,7 +146,10 @@ Warm paper neutrals and near-black green ink, with one season accent active at a
 - **Card Stock** (card): every card, ticket, and the header bar.
 - **Clean Sheet** (page-white): alternating section background.
 - **Pencil Rule** (rule-line): dashed dividers, chip borders, ticket perforations.
-- **Night Lot** (footer-night): footer only.
+- **Night Lot** (footer-night): footer only, with Footer Text (footer-text) on it.
+- **Label Muted** (label-muted): small uppercase labels and fine print on paper; the lightest text allowed on cream (5:1).
+- **Leader Dots** (leader-dot): the dotted line between a service and its price.
+- **On-Green Text** (on-green-text): body text on the green band.
 - Each season accent has a soft tint (green-soft, rust-soft, frost-soft, lights-soft) for badges, icon tiles, and the "See all prices" button.
 
 ### Named Rules

@@ -258,6 +258,62 @@
           "#CCE1D7",
           "#EFF5F2"
         ]
+      },
+      "white": {
+        "role": "neutral",
+        "displayName": "White",
+        "canonical": "#FFFFFF",
+        "tonalRamp": [
+          "#FFFFFF"
+        ]
+      },
+      "label-muted": {
+        "role": "neutral",
+        "displayName": "Label Muted",
+        "canonical": "#6B6354",
+        "tonalRamp": [
+          "#6B6354"
+        ]
+      },
+      "leader-dot": {
+        "role": "neutral",
+        "displayName": "Leader Dots",
+        "canonical": "#C9BFAC",
+        "tonalRamp": [
+          "#C9BFAC"
+        ]
+      },
+      "on-green-text": {
+        "role": "neutral",
+        "displayName": "On-Green Text",
+        "canonical": "#D7E3D9",
+        "tonalRamp": [
+          "#D7E3D9"
+        ]
+      },
+      "footer-text": {
+        "role": "neutral",
+        "displayName": "Footer Text",
+        "canonical": "#C9D2CB",
+        "tonalRamp": [
+          "#C9D2CB"
+        ]
+      },
+      "chip-paper": {
+        "role": "neutral",
+        "displayName": "Chip Paper",
+        "canonical": "#F1EBDD",
+        "tonalRamp": [
+          "#F1EBDD"
+        ]
+      },
+      "sky-summer": {
+        "role": "neutral",
+        "displayName": "Summer Sky",
+        "canonical": "#CFE6F0",
+        "tonalRamp": [
+          "#CFE6F0"
+        ]
       }
     },
     "typographyMeta": {
