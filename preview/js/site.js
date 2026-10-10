@@ -184,6 +184,14 @@
     const top = track.getBoundingClientRect().top + scrollY - stickTop() + STOPS[+a.dataset.go] * span();
     scrollTo({ top: Math.max(0, top - 1), behavior: reduce ? 'auto' : 'smooth' });
   }));
+  // arriving from a season page (index.html#fall): land on that season's stop
+  const jumpToHash = () => {
+    const i = { '#summer': 0, '#fall': 1, '#winter': 2 }[location.hash];
+    if (i === undefined) return;
+    scrollTo({ top: Math.max(0, track.getBoundingClientRect().top + scrollY - stickTop() + STOPS[i] * span() - 1), behavior: 'auto' });
+  };
+  if ('scrollRestoration' in history && location.hash) history.scrollRestoration = 'manual';
+  jumpToHash(); addEventListener('load', jumpToHash); addEventListener('hashchange', jumpToHash);
 
   const contents = [$('c0'), $('c1'), $('c2')], peeks = [$('k0'), $('k1'), $('k2')];
   const navLinks = document.querySelectorAll('.nav [data-go]'), dotLinks = document.querySelectorAll('.dots [data-go]');
