@@ -1,0 +1,444 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-10T15:01:32.114796Z",
+  "title": "Design System: Mangiapane Brothers Lawn and Snow",
+  "extensions": {
+    "colorMeta": {
+      "ink": {
+        "role": "neutral",
+        "displayName": "Almanac Ink",
+        "canonical": "#1C2620",
+        "tonalRamp": [
+          "#202C25",
+          "#384C40",
+          "#506D5B",
+          "#688D77",
+          "#8AA896",
+          "#ADC2B5",
+          "#D0DCD5",
+          "#F0F4F2"
+        ]
+      },
+      "ink-soft": {
+        "role": "neutral",
+        "displayName": "Weathered Ink",
+        "canonical": "#3E4A41",
+        "tonalRamp": [
+          "#232A25",
+          "#3C483F",
+          "#56675A",
+          "#708575",
+          "#90A294",
+          "#B1BEB4",
+          "#D3DAD4",
+          "#F1F3F2"
+        ]
+      },
+      "brand-green": {
+        "role": "primary",
+        "displayName": "Mangiapane Green",
+        "canonical": "#1B4D2E",
+        "tonalRamp": [
+          "#143922",
+          "#22623B",
+          "#318C53",
+          "#40B56C",
+          "#68CA8D",
+          "#95DAAF",
+          "#C3EAD1",
+          "#ECF8F1"
+        ]
+      },
+      "brand-green-deep": {
+        "role": "primary",
+        "displayName": "Mangiapane Green, deep",
+        "canonical": "#143B23",
+        "tonalRamp": [
+          "#133922",
+          "#22633B",
+          "#308D54",
+          "#3EB76C",
+          "#67CB8D",
+          "#94DBAF",
+          "#C2EAD2",
+          "#ECF9F1"
+        ]
+      },
+      "fall-rust": {
+        "role": "secondary",
+        "displayName": "Leaf-Pile Rust",
+        "canonical": "#8A3A16",
+        "tonalRamp": [
+          "#421C0B",
+          "#723012",
+          "#A3441A",
+          "#D35922",
+          "#E37D4F",
+          "#EBA484",
+          "#F4CBB9",
+          "#FBEFE9"
+        ]
+      },
+      "frost-blue": {
+        "role": "secondary",
+        "displayName": "Storm-Window Frost",
+        "canonical": "#2D5B7A",
+        "tonalRamp": [
+          "#152A38",
+          "#244861",
+          "#33678A",
+          "#4285B3",
+          "#6AA2C8",
+          "#97BED9",
+          "#C3DAE9",
+          "#ECF3F8"
+        ]
+      },
+      "lights-red": {
+        "role": "secondary",
+        "displayName": "Holiday Bulb Red",
+        "canonical": "#A3302F",
+        "tonalRamp": [
+          "#3B1111",
+          "#671E1E",
+          "#922B2A",
+          "#BE3837",
+          "#D16261",
+          "#DF9190",
+          "#EDC0C0",
+          "#F9EBEB"
+        ]
+      },
+      "gold": {
+        "role": "tertiary",
+        "displayName": "Porch-Light Gold",
+        "canonical": "#D9A441",
+        "tonalRamp": [
+          "#402E0D",
+          "#6E5016",
+          "#9D711F",
+          "#CC9329",
+          "#DDAE55",
+          "#E7C688",
+          "#F1DEBB",
+          "#FBF5EA"
+        ]
+      },
+      "paper": {
+        "role": "neutral",
+        "displayName": "Newsprint Paper",
+        "canonical": "#F6F1E6",
+        "tonalRamp": [
+          "#382D14",
+          "#624E23",
+          "#8B6F32",
+          "#B49041",
+          "#C9AB69",
+          "#D9C496",
+          "#E9DDC3",
+          "#F8F4EC"
+        ]
+      },
+      "card": {
+        "role": "neutral",
+        "displayName": "Card Stock",
+        "canonical": "#FCF9F2",
+        "tonalRamp": [
+          "#3E300E",
+          "#6C5319",
+          "#997623",
+          "#C7992E",
+          "#D9B259",
+          "#E4C98B",
+          "#F0E0BD",
+          "#FAF5EA"
+        ]
+      },
+      "page-white": {
+        "role": "neutral",
+        "displayName": "Clean Sheet",
+        "canonical": "#FFFDF8",
+        "tonalRamp": [
+          "#4C3700",
+          "#855F00",
+          "#BD8700",
+          "#F5AF00",
+          "#FFC533",
+          "#FFD670",
+          "#FFE8AD",
+          "#FFF8E5"
+        ]
+      },
+      "rule-line": {
+        "role": "neutral",
+        "displayName": "Pencil Rule",
+        "canonical": "#E2DACB",
+        "tonalRamp": [
+          "#312A1B",
+          "#55482F",
+          "#796744",
+          "#9D8558",
+          "#B6A27C",
+          "#CCBEA3",
+          "#E2DACB",
+          "#F6F3EF"
+        ]
+      },
+      "green-soft": {
+        "role": "primary",
+        "displayName": "Green tint",
+        "canonical": "#E3EEDF",
+        "tonalRamp": [
+          "#21321B",
+          "#39572E",
+          "#517B41",
+          "#69A055",
+          "#8AB87A",
+          "#ADCDA2",
+          "#D0E3CA",
+          "#F0F6EE"
+        ]
+      },
+      "rust-soft": {
+        "role": "secondary",
+        "displayName": "Rust tint",
+        "canonical": "#F8E2D0",
+        "tonalRamp": [
+          "#43230A",
+          "#733D11",
+          "#A45718",
+          "#D57120",
+          "#E5914D",
+          "#ECB283",
+          "#F4D3B8",
+          "#FCF1E9"
+        ]
+      },
+      "frost-soft": {
+        "role": "secondary",
+        "displayName": "Frost tint",
+        "canonical": "#DCE8F1",
+        "tonalRamp": [
+          "#162937",
+          "#26465F",
+          "#366487",
+          "#4682AF",
+          "#6D9FC5",
+          "#99BCD6",
+          "#C5D9E8",
+          "#EDF3F8"
+        ]
+      },
+      "lights-soft": {
+        "role": "secondary",
+        "displayName": "Bulb tint",
+        "canonical": "#F6DFDB",
+        "tonalRamp": [
+          "#3D160F",
+          "#6A261B",
+          "#973726",
+          "#C44731",
+          "#D66E5C",
+          "#E2998D",
+          "#EFC5BE",
+          "#FAEDEB"
+        ]
+      },
+      "footer-night": {
+        "role": "neutral",
+        "displayName": "Night Lot",
+        "canonical": "#13201A",
+        "tonalRamp": [
+          "#1C3027",
+          "#315344",
+          "#467660",
+          "#5B9A7D",
+          "#7FB39B",
+          "#A5CAB9",
+          "#CCE1D7",
+          "#EFF5F2"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Service name on each season card; one line, same size across seasons."
+      },
+      "tagline": {
+        "displayName": "Tagline",
+        "purpose": "The promise under the service name, in the season accent."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Section titles."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Card, ticket and FAQ titles."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Explanations, max about 58ch."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Uppercase eyebrows and table heads."
+      },
+      "price": {
+        "displayName": "Price",
+        "purpose": "The number on a price ticket, tabular figures."
+      }
+    },
+    "shadows": [
+      {
+        "name": "pinned-sign",
+        "value": "7px 7px 0 rgba(28,38,32,.14)",
+        "purpose": "Cards, tickets, tables."
+      },
+      {
+        "name": "accent-pin",
+        "value": "7px 7px 0 var(--accent)",
+        "purpose": "The recommended ticket only."
+      },
+      {
+        "name": "pressed-key",
+        "value": "0 3px 0 #0E2A18",
+        "purpose": "Call button; 1px when pressed."
+      },
+      {
+        "name": "taped-print",
+        "value": "0 18px 40px rgba(60,48,30,.18)",
+        "purpose": "Photos only."
+      }
+    ],
+    "motion": [
+      {
+        "name": "season-scroll",
+        "value": "scroll-driven, eased cubic in-out over 28% of the track per change",
+        "purpose": "Summer to fall to winter transitions."
+      },
+      {
+        "name": "ease-ui",
+        "value": ".15s ease",
+        "purpose": "Button and card hover/press."
+      },
+      {
+        "name": "page-handoff",
+        "value": "view-transition .45s cubic-bezier(.2,.7,.2,1)",
+        "purpose": "Scene and card carry over into season pages."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "phone",
+        "value": "819px"
+      },
+      {
+        "name": "tablet",
+        "value": "1060px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Call Button",
+      "kind": "button",
+      "refersTo": "button-call",
+      "description": "The primary action everywhere.",
+      "html": "<a class=\"ds-btn-call\" href=\"#\">Call (734) 450-2400</a>",
+      "css": ".ds-btn-call{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 20px;border-radius:12px;background:#1B4D2E;color:#fff;font:700 16px \"Public Sans\",Arial,sans-serif;text-decoration:none;box-shadow:0 3px 0 #0E2A18;transition:background .15s,transform .15s,box-shadow .15s}.ds-btn-call:hover{background:#143B23}.ds-btn-call:active{transform:translateY(2px);box-shadow:0 1px 0 #0E2A18}.ds-btn-call:focus-visible{outline:3px solid #1C2620;outline-offset:3px}"
+    },
+    {
+      "name": "See Prices Button",
+      "kind": "button",
+      "refersTo": "button-see",
+      "description": "Opens the season page; season-tinted.",
+      "html": "<a class=\"ds-btn-see\" href=\"#\">See all prices and details <svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M5 12h14M13 6l6 6-6 6\"/></svg></a>",
+      "css": ".ds-btn-see{display:flex;align-items:center;justify-content:space-between;gap:8px;min-height:52px;padding:0 20px;border-radius:12px;background:#E3EEDF;color:#1B4D2E;font:700 16px \"Public Sans\",Arial,sans-serif;text-decoration:none;box-shadow:inset 0 0 0 2px #1C2620}.ds-btn-see svg{transition:transform .2s}.ds-btn-see:hover{background:#D6E7D0}.ds-btn-see:hover svg{transform:translateX(4px)}.ds-btn-see:focus-visible{outline:3px solid #1C2620;outline-offset:3px}"
+    },
+    {
+      "name": "Season Card",
+      "kind": "card",
+      "refersTo": "season-card",
+      "description": "Sign-like card over the scene.",
+      "html": "<div class=\"ds-card\"><h3>Fall cleanup</h3><p class=\"t\">Two leaf visits, timed to your city pickup.</p><ul><li><span>Full Fall Cleanup, season</span><i></i><b>from $435</b></li><li><span>Gutter cleaning</span><i></i><b>free, included</b></li></ul></div>",
+      "css": ".ds-card{max-width:420px;background:#FCF9F2;border:2px solid #1C2620;border-radius:20px;padding:24px 26px 22px;box-shadow:7px 7px 0 rgba(28,38,32,.2);color:#1C2620;font-family:\"Public Sans\",Arial,sans-serif}.ds-card h3{font:800 44px/1 Bitter,Georgia,serif;letter-spacing:-.015em;margin:0}.ds-card .t{font:700 20px/1.25 Bitter,Georgia,serif;color:#8A3A16;margin:8px 0 12px}.ds-card ul{list-style:none;margin:0;padding:12px 0 0;border-top:2px dashed #E2DACB;display:flex;flex-direction:column;gap:7px}.ds-card li{display:flex;align-items:baseline;gap:8px;font-size:15px}.ds-card li span{font-weight:600}.ds-card li i{flex:1;border-bottom:2px dotted #C9BFAC;transform:translateY(-4px)}.ds-card li b{font:800 15px Bitter,Georgia,serif;color:#8A3A16}"
+    },
+    {
+      "name": "Price Ticket",
+      "kind": "card",
+      "refersTo": "price-ticket",
+      "description": "Price stub with perforation.",
+      "html": "<div class=\"ds-ticket\"><div class=\"top\"><p>North Livonia</p><h4>Newburgh and 7 Mile area</h4><div class=\"amt\"><b>$595</b><span>per season</span></div></div><div class=\"bot\">Two visits, gutters on the final visit</div></div>",
+      "css": ".ds-ticket{max-width:320px;background:#FCF9F2;border:2px solid #1C2620;border-radius:18px;box-shadow:7px 7px 0 rgba(28,38,32,.14);font-family:\"Public Sans\",Arial,sans-serif;color:#1C2620}.ds-ticket .top{padding:20px 22px 16px}.ds-ticket p{margin:0;font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#8A3A16}.ds-ticket h4{font:800 21px/1.15 Bitter,Georgia,serif;margin:6px 0 0}.ds-ticket .amt{display:flex;align-items:baseline;gap:8px;margin-top:14px}.ds-ticket .amt b{font:800 52px/.95 Bitter,Georgia,serif;letter-spacing:-.02em}.ds-ticket .amt span{font-weight:600;color:#3E4A41}.ds-ticket .bot{border-top:2px dashed #E2DACB;padding:14px 22px 18px;font-size:15px;color:#3E4A41}"
+    },
+    {
+      "name": "Neighborhood Chip",
+      "kind": "chip",
+      "refersTo": "chip",
+      "description": "Service-area chips.",
+      "html": "<span class=\"ds-chip core\">Rosedale Gardens</span> <span class=\"ds-chip\">Canton</span>",
+      "css": ".ds-chip{display:inline-block;font:600 14px \"Public Sans\",Arial,sans-serif;padding:8px 12px;border-radius:999px;background:#F1EBDD;border:1.5px solid #E2DACB;color:#1C2620}.ds-chip.core{background:#E3EEDF;color:#1B4D2E;border-color:#BFD6B8}"
+    },
+    {
+      "name": "Season Nav",
+      "kind": "nav",
+      "description": "Header season pills.",
+      "html": "<nav class=\"ds-nav\"><a aria-current=\"true\">Spring and summer</a><a>Fall</a><a>Winter</a><a>Our story</a></nav>",
+      "css": ".ds-nav{display:flex;gap:6px;font:600 15px \"Public Sans\",Arial,sans-serif}.ds-nav a{padding:9px 12px;border-radius:999px;color:#3E4A41;cursor:pointer}.ds-nav a:hover{background:#EFE8D8;color:#1C2620}.ds-nav a[aria-current]{background:#1C2620;color:#FCF9F2}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Neighborhood Almanac",
+    "overview": "The site is a year on one street. A single illustrated neighborhood (a Livonia brick ranch, an oak, a utility pole, the company truck at the curb, one of the brothers at work) turns from summer to fall to winter as you scroll, and every part of the page knows which season it belongs to. Like an almanac, it is practical first: what gets done this season, what it costs, when it happens, and who to call.\n\nEverything printed on top of that street looks like it was made for the neighborhood rather than downloaded: Bitter slab headlines with the weight of a painted shop sign, cream paper cards with a firm ink border and a hard offset shadow, dotted price leaders like a menu board, taped-up photos, grass edges between sections. The feel is sturdy, warm, and neighborly: confident enough to read as a real operation, hand-made enough to read as local.\n\nThe illustration is flat (solid fills, no outlines, no glossy gradients) and must stay specific: real Livonia architecture, real equipment, the real truck, the crew doing the actual season's job. Generic stock-suburb tropes are the failure mode this system exists to avoid.",
+    "keyCharacteristics": [
+      "One continuous illustrated street, three seasons, scroll-driven.",
+      "Each season owns a color (green, rust, frost, with holiday red for lights) across cards, prices, links, and pages.",
+      "Paper-and-ink surfaces: cream cards, 2px ink borders, hard offset shadows.",
+      "Slab-serif display type for names, promises, and prices; quiet sans for everything else.",
+      "The phone number is always one tap away."
+    ],
+    "rules": [
+      {
+        "name": "The One Season Rule",
+        "body": "A card, page, or section speaks in one season's accent. Never mix rust and frost in the same component; winter splits lights (red) and snow (blue) into separate, equal sections.",
+        "section": "colors"
+      },
+      {
+        "name": "The Ink Not Black Rule",
+        "body": "Text, borders, and shadows use Almanac Ink, never pure #000.",
+        "section": "colors"
+      },
+      {
+        "name": "The Name Leads Rule",
+        "body": "The service name is the biggest thing on a season card; the promise sits under it as a tagline, never the other way around.",
+        "section": "typography"
+      },
+      {
+        "name": "The Ampersand Rule",
+        "body": "Two-part service names use \"&\" so they hold one line.",
+        "section": "typography"
+      },
+      {
+        "name": "The No-Blur Rule",
+        "body": "Interface surfaces never use blurred shadows or glows. Blur belongs only to photographs.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do tie every component to one season's accent and keep that accent consistent from the scene to the season page.",
+      "Do draw the scene with specific, local detail: brick ranch, utility pole, street sign, the white pickup and trailer, a brother doing that season's job.",
+      "Do keep the phone number visible on every screen (header, card, booking pill or phone bar).",
+      "Do use hard offset shadows and 2px ink borders for interface surfaces.",
+      "Do write headlines short and declarative, ending in a period."
+    ],
+    "donts": [
+      "Don't use stock-vector tropes in the illustration: gradient skies, glowing sun blobs, oval clouds, lollipop trees, a symmetric front-on house row.",
+      "Don't use blurred shadows, glows, or glassmorphism on interface surfaces.",
+      "Don't add a third typeface or set long text in Bitter.",
+      "Don't add forms, chat widgets, or a texting option; the call is the only action.",
+      "Don't show invented reviews, star ratings, customer counts, or awards."
+    ]
+  }
+}
