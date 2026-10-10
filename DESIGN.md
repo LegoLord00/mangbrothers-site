@@ -207,7 +207,11 @@ Soft but sturdy: 20px corners on cards, 18px on tickets, 12px on buttons, full p
 - **Light / ghost:** on the green call band only.
 
 ### Season card (signature)
-Card Stock, 2px ink border, 20px corners, pinned-sign shadow. Order: service name (Display), tagline (season accent), one-line description, dotted-leader price list, Call button, See-prices button. Sized to roughly 470px on desktop; its width sets the Display size.
+A painted yard sign with a tear-off stub. Card Stock body, 2px ink border, 10px corners, pinned-sign shadow. Sized to roughly 470px on desktop; its width sets the Display size.
+- **Plate:** the service name in cream Bitter on the season color (green, rust, frost), with a thin cream inset line and four small screw dots, like an enamel sign. The name fits one line at the same size in every season.
+- **Body:** tagline in the season color, one-line description, then a price block ruled top and bottom in ink: small uppercase label, big Bitter figure, short unit line. Winter shows lights and snow side by side, split by a dashed rule. Secondary prices follow as dotted-leader rows.
+- **Call:** full-width Call button.
+- **Stub:** below a dashed perforation, a full-width season-tinted strip ("See all lawn prices and details" with an arrow). On season pages the stub reads "Back to all seasons."
 
 ### Price ticket (signature)
 Card Stock with a "where" label, title, big Price figure, then a dashed perforation with notches and a short bullet list. The recommended option gets an Accent pin shadow and a gold "Our pick" flag.

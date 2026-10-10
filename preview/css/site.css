@@ -525,3 +525,51 @@ a:focus-visible{outline:3px solid var(--ink);outline-offset:3px;border-radius:4p
 .ba{border-radius:4px}
 .print img{border-radius:4px}
 @media (max-width:819px){.content,.content.left,.content.right{border-radius:20px}}
+
+/* ---------- season card: a painted yard sign with a tear-off stub ---------- */
+.content{--plate:var(--brand);--soft:#E3EEDF;--deep:var(--brand);padding:0;gap:0;border-radius:10px;overflow:hidden;box-shadow:7px 7px 0 rgba(28,38,32,.22)}
+.content.fall,.fall .content{--plate:#8A3A16;--soft:#F8E2D0;--deep:#8A3A16}
+.content.winter,.winter .content{--plate:var(--frost);--soft:#DCE8F1;--deep:var(--frost)}
+.plate{position:relative;background:var(--plate);padding:20px 26px 18px;border-bottom:2px solid var(--ink)}
+.plate::before{content:"";position:absolute;inset:6px;border:1.5px solid rgba(246,241,230,.5);border-radius:5px;pointer-events:none}
+.plate::after{content:"";position:absolute;inset:0;pointer-events:none;
+  background:radial-gradient(circle at 15px 15px,rgba(246,241,230,.85) 0 2.2px,transparent 2.8px),radial-gradient(circle at calc(100% - 15px) 15px,rgba(246,241,230,.85) 0 2.2px,transparent 2.8px),
+  radial-gradient(circle at 15px calc(100% - 15px),rgba(246,241,230,.85) 0 2.2px,transparent 2.8px),radial-gradient(circle at calc(100% - 15px) calc(100% - 15px),rgba(246,241,230,.85) 0 2.2px,transparent 2.8px)}
+.content .plate h1,.content .plate h2{color:#F6F1E6;position:relative}
+.cbody{display:flex;flex-direction:column;gap:12px;padding:18px 26px 20px}
+.content .tagline{margin:0;color:var(--deep)}
+.content .lede{font-size:16px}
+.bigprice{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(0,1fr);border-top:2px solid var(--ink);border-bottom:2px solid var(--ink);padding:10px 0 11px;margin-top:2px}
+.bigprice>div{display:flex;flex-direction:column;gap:1px}
+.bigprice>div+div{border-left:2px dashed var(--line);padding-left:18px}
+.bigprice small{font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#6B6354}
+.bigprice b{font-family:var(--display);font-weight:800;font-size:46px;line-height:1;letter-spacing:-.02em;color:var(--ink);font-variant-numeric:tabular-nums;margin-top:2px}
+.bigprice span{font-size:13px;font-weight:600;color:var(--ink-soft)}
+.content .prices{border-top:0;padding-top:0;margin:0}
+.content .prices li b{color:var(--deep)}
+.content .ctas{margin-top:2px}
+.content .ctas .btn.call{flex:1 1 100%}
+.stub{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:15px 26px 16px;background:var(--soft);color:var(--deep);font-weight:700;font-size:15.5px;text-decoration:none;border-top:2px dashed rgba(28,38,32,.55);transition:background .15s ease}
+.stub svg{flex:none;transition:transform .2s ease}
+.stub:hover{background:color-mix(in srgb,var(--soft) 82%,var(--plate))}
+.stub:hover svg{transform:translateX(4px)}
+.stub.back{justify-content:flex-start}
+.stub.back:hover svg{transform:translateX(-4px)}
+.stub:focus-visible{outline:3px solid var(--ink);outline-offset:-5px}
+.content .plate h1,.content .plate h2{font-size:min(52px,9.1cqi)}
+.dhero .content{pointer-events:auto}
+.dhero .content .lede{display:block}
+@media (max-height:760px) and (min-width:820px){.content .lede{display:none}.bigprice b{font-size:40px}.cbody{gap:10px;padding:14px 24px 16px}.plate{padding:16px 24px 14px}}
+@media (max-width:819px){
+  .content,.content.left,.content.right{padding:0;gap:0;border-radius:10px;box-shadow:5px 5px 0 rgba(28,38,32,.22)}
+  .plate{padding:15px 18px 13px}
+  .plate::after{background:none}
+  .cbody{padding:12px 18px 14px;gap:9px}
+  .content .lede,.content .prices{display:none}
+  .content .ctas{display:none}
+  .dhero .content .ctas{display:flex}
+  .bigprice{padding:8px 0 9px}
+  .bigprice b{font-size:36px}
+  .content .plate h1,.content .plate h2{font-size:min(42px,9.1cqi)}
+  .stub{padding:12px 18px 13px;font-size:14.5px}
+}

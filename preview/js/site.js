@@ -207,7 +207,7 @@
 
   // page-to-page: hand the season card and the scene to the season page (and back)
   const tag = (i, on) => { const c = contents[i]; if (!c) return; c.style.viewTransitionName = on ? 'card' : ''; stageEl.style.viewTransitionName = on ? 'scene' : ''; };
-  document.querySelectorAll('.btn.see, #barSee').forEach(a => a.addEventListener('click', () => tag(shown, true)));
+  document.querySelectorAll('.stub, #barSee').forEach(a => a.addEventListener('click', () => tag(shown, true)));
   addEventListener('pageshow', () => contents.forEach((c, i) => tag(i, false)));
   addEventListener('pagereveal', e => {
     const i = { '#summer': 0, '#fall': 1, '#winter': 2 }[location.hash];
