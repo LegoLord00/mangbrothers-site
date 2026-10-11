@@ -1,0 +1,136 @@
+/* Clean / professional skin over the same scene and animation.
+   White surfaces, one sans family, soft real shadows, hairline rules, no paper/ink costume. */
+:root{
+  --ink:#121A15;
+  --ink-soft:#4A544D;
+  --label:#5E675F;
+  --paper:#F4F5F1;
+  --card:#FFFFFF;
+  --sheet:#FFFFFF;
+  --line:#E3E6E0;
+  --display:"Archivo", "Helvetica Neue", Arial, sans-serif;
+  --body:"Archivo", "Helvetica Neue", Arial, sans-serif;
+  --shadow:0 1px 2px rgba(16,24,20,.06),0 12px 32px rgba(16,24,20,.12);
+  --shadow-lg:0 2px 4px rgba(16,24,20,.06),0 24px 60px rgba(16,24,20,.22);
+}
+html,body{background:#fff}
+body{font-family:var(--body);letter-spacing:-.003em}
+::selection{background:#D6E6D0}
+
+/* header */
+.hdr{background:rgba(255,255,255,.96);border-bottom:1px solid var(--line);backdrop-filter:saturate(1.2)}
+.nav{gap:26px;font-weight:600}
+.nav a{padding:6px 0;border-radius:0;color:var(--ink-soft)}
+.nav a svg{display:none}
+.nav a:hover{background:none;color:var(--ink)}
+.nav a[aria-current]{background:none;color:var(--ink);box-shadow:inset 0 -2px 0 var(--ink)}
+.btn{border-radius:8px;font-weight:700;letter-spacing:0}
+.btn.call{box-shadow:none}
+.btn.call:active{transform:none;box-shadow:none}
+
+/* scene: drop the paper grain */
+.grain{display:none}
+
+/* season card: plain white panel, soft shadow, no plate/stub costume */
+.content{border:0;border-radius:14px;background:#fff;box-shadow:var(--shadow-lg);overflow:hidden}
+.plate{background:none;border-bottom:0;padding:30px 32px 0}
+.plate::before,.plate::after{display:none}
+.content .plate h1,.content .plate h2{color:var(--ink);font-family:var(--display);font-weight:800;letter-spacing:-.03em;font-size:min(48px,8.3cqi);line-height:1}
+.cbody{padding:14px 32px 26px;gap:14px}
+.content .tagline{font-family:var(--body);font-weight:600;font-size:19px;line-height:1.35;color:var(--deep)}
+.content .lede{color:var(--ink-soft);font-size:16px;line-height:1.55}
+.bigprice{border-top:1px solid var(--line);border-bottom:0;padding:16px 0 0;margin-top:4px}
+.bigprice>div+div{border-left:1px solid var(--line);padding-left:22px}
+.bigprice small{font-size:12px;letter-spacing:.06em;color:var(--label)}
+.bigprice b{font-family:var(--display);font-weight:800;font-size:44px;letter-spacing:-.03em}
+.bigprice span{font-weight:500;color:var(--label)}
+.content .prices{gap:6px}
+.prices li{font-size:15px}
+.prices li span{font-weight:500;color:var(--ink-soft)}
+.prices li i{border-bottom:1px solid var(--line);transform:translateY(-5px)}
+.prices li b{font-family:var(--body);font-weight:700;color:var(--ink)}
+.content .prices li b{color:var(--ink)}
+.content .ctas{margin-top:6px}
+.stub{background:none;border-top:1px solid var(--line);color:var(--deep);padding:16px 32px 18px;font-weight:700}
+.stub:hover{background:#F7F8F5}
+.content .tagline,.stub{--x:0}
+
+/* next-season strip */
+.peek{border-top:1px solid rgba(0,0,0,.08);font-weight:600;letter-spacing:.08em;font-size:12px}
+.peek.p-fall{background:#fff;color:#7A3412}
+.peek.p-winter{background:#fff;color:#22465E}
+.peek.p-story{background:#fff;color:var(--ink)}
+.dots a{border-width:1.5px;width:11px;height:11px}
+
+/* sections below: white and light gray, no grass edges */
+.grass-top::before{display:none}
+.story-sec,.g-paper{background:var(--paper)}
+.year,.g-white,.area{background:#fff}
+.work{background:var(--paper)}
+.title{font-family:var(--display);font-weight:800;letter-spacing:-.03em}
+.body{color:var(--ink-soft)}
+
+/* photos: straight, crisp, no tape */
+.print{transform:none;padding:0;background:none;box-shadow:none;border-radius:12px;overflow:hidden}
+.print img{border-radius:12px}
+.tape{display:none}
+.work figure{transform:none!important;background:#fff;padding:0;border-radius:12px;box-shadow:var(--shadow);overflow:hidden}
+.work figcaption{padding:12px 16px 14px;font-weight:600}
+.ba{border-radius:0}
+.facts div{border-top:1px solid var(--line)}
+.facts dd{font-family:var(--display);font-weight:800;letter-spacing:-.02em}
+
+/* calendar */
+.lane [class^="bar-"]{border:0!important;box-shadow:none}
+
+/* why us */
+.why-item{border-top:1px solid rgba(255,255,255,.18)}
+.why-item h3{font-family:var(--display);letter-spacing:-.02em}
+.why-item h3::before{height:3px;width:32px}
+
+/* map and chips */
+.map{border:1px solid var(--line);box-shadow:var(--shadow);border-radius:14px}
+.chips li{background:#fff;border:1px solid var(--line);font-weight:500}
+.chips li.core{background:#EEF4EB;border-color:#D5E3CF}
+
+/* call band */
+.cta .title,.bignum{font-family:var(--display)}
+.bignum{font-weight:800;letter-spacing:-.03em}
+.btn.light{box-shadow:none}
+
+/* booking pill */
+.book{border:0;box-shadow:var(--shadow-lg);border-radius:14px}
+.book-txt b{font-family:var(--display);letter-spacing:-.02em}
+
+/* season pages */
+.dhero{border-bottom:0}
+.jump{background:#fff;border-bottom:1px solid var(--line)}
+.jump a{box-shadow:none;border-radius:6px}
+.paper-card,.ticket,.ptable,.promises,.svc-grid,.next,.twin-card{border:1px solid var(--line);box-shadow:var(--shadow);border-radius:14px}
+.ticket.pick{box-shadow:0 0 0 2px var(--accent),var(--shadow)}
+.ticket .flag{border:0;border-radius:6px}
+.ticket .bottom{border-top:1px solid var(--line)}
+.ticket .bottom::before,.ticket .bottom::after{display:none}
+.ticket h3,.ticket .amt b,.dual b,.twin-card h3,.twin-card .from b,.paper-card h3,.svc-grid li b,.steps b,.promise b,.faq summary,.next b,.ptable td{font-family:var(--display);letter-spacing:-.02em}
+.ptable thead th{background:#F4F5F1;color:var(--label)}
+.stamp{border:0;transform:none;border-radius:14px;box-shadow:var(--shadow)}
+.steps li::before{border-width:1.5px;box-shadow:none;font-family:var(--display)}
+.steps::before{border-top-style:solid;border-color:var(--line)}
+.checks li::before{border-radius:50%;border-width:1px}
+.svc-grid li{border-bottom:1px solid var(--line)}
+.promise + .promise{border-left:1px solid var(--line)}
+.next:hover{transform:translateY(-2px);box-shadow:var(--shadow-lg)}
+.photo-row figure{transform:none!important;padding:0;border-radius:12px;overflow:hidden;box-shadow:var(--shadow)}
+.photo-row figcaption{padding:10px 14px 12px}
+.faq{border-top:1px solid var(--ink)}
+.faq summary::after{border-width:1.5px}
+@media (max-width:819px){
+  .content,.content.left,.content.right{border-radius:14px;box-shadow:var(--shadow-lg)}
+  .plate{padding:18px 20px 0}
+  .cbody{padding:10px 20px 14px}
+  .stub{padding:13px 20px 14px}
+  .content .plate h1,.content .plate h2{font-size:min(38px,8.3cqi)}
+  .promise + .promise{border-left:0;border-top:1px solid var(--line)}
+}
+.bar{border-top:1px solid var(--line);box-shadow:0 -6px 20px rgba(16,24,20,.08)}
+.hdr .call-icon{border-radius:8px}
