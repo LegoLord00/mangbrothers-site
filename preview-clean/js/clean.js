@@ -18,3 +18,19 @@
   if (document.fonts) document.fonts.ready.then(place);
   place();
 })();
+
+/* parallax: far layers drift slower than the yard, the truck drifts the other way */
+(() => {
+  const track = document.getElementById('track'), stage = document.getElementById('stage');
+  const layers = [...document.querySelectorAll('#scene .par')].map(g => [g, +g.dataset.par]);
+  if (!track || !layers.length || matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  let queued = false;
+  const run = () => {
+    queued = false;
+    const r = track.getBoundingClientRect(), top = parseFloat(getComputedStyle(stage).top) || 0, span = track.offsetHeight - stage.clientHeight;
+    const p = span > 1 ? Math.min(1, Math.max(0, (top - r.top) / span)) : 0;
+    layers.forEach(([g, f]) => g.setAttribute('transform', `translate(${((p - .5) * f).toFixed(2)} 0)`));
+  };
+  addEventListener('scroll', () => { if (!queued) { queued = true; requestAnimationFrame(run); } }, { passive: true });
+  run();
+})();

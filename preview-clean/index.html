@@ -63,30 +63,17 @@
       <g data-fill="#FFFFFF,#FCE6CF,#F4F6F9" fill="#FFFFFF" opacity=".92">
         <g id="cloud1"><path d="M70 196 H246 A22 22 0 0 0 214 172 A30 30 0 0 0 160 160 A24 24 0 0 0 116 170 A20 20 0 0 0 86 180 A16 16 0 0 0 70 196Z"/></g>
         <g id="cloud2"><path d="M506 124 H628 A18 18 0 0 0 602 106 A24 24 0 0 0 558 98 A18 18 0 0 0 524 110 A14 14 0 0 0 506 124Z"/></g>
-        <g id="cloud3"><path d="M818 236 H958 A20 20 0 0 0 930 214 A26 26 0 0 0 882 206 A20 20 0 0 0 846 218 A15 15 0 0 0 818 236Z"/></g>
       </g>
 
+      <!-- depth: far ridge, hills, treeline (slowest parallax, lightest values) -->
+      <g class="par" data-par="16">
+      <path d="M-300 430 C 0 380 200 404 420 398 C 640 392 820 360 1300 392 L1300 700 L-300 700Z" data-fill="#C6E0D2,#EECFA6,#E4EAF0" fill="#C6E0D2"/>
       <path d="M-300 470 C 40 395 240 420 420 436 C 600 452 780 386 1300 426 L1300 700 L-300 700Z" data-fill="#A6CC98,#D7A770,#DCE4EC" fill="#A6CC98"/>
-      <g data-fill="#86B676,#C48345,#C9D3DD" fill="#86B676">
-        <ellipse cx="-10" cy="470" rx="60" ry="40"/><ellipse cx="60" cy="462" rx="44" ry="36"/><ellipse cx="250" cy="468" rx="48" ry="34"/><ellipse cx="300" cy="474" rx="40" ry="28"/>
-        <ellipse cx="640" cy="458" rx="52" ry="36"/><ellipse cx="700" cy="466" rx="40" ry="28"/><ellipse cx="960" cy="452" rx="58" ry="40"/><ellipse cx="1030" cy="460" rx="48" ry="34"/>
-      </g>
+      <path d="M-300 470 C-240 446 -200 452 -160 440 C-120 428 -80 444 -40 436 C0 424 40 438 80 432 C120 424 150 442 190 446 C230 450 260 438 300 444 C340 450 380 452 420 456 C470 460 520 448 570 440 C620 432 660 444 700 446 C740 448 780 436 820 430 C860 424 900 436 940 432 C980 428 1020 438 1060 434 C1120 428 1200 440 1300 436 L1300 700 L-300 700Z" data-fill="#86B676,#C48345,#C9D3DD" fill="#86B676"/>
 
-      <!-- neighbour, left -->
-      <g transform="translate(40 438)">
-        <path d="M-8 34 L64 0 L136 34Z" fill="#6B5A50"/><path data-op="0,0,1" opacity="0" d="M-10 32 L64 -3 L138 32 L126 32 L64 4 L2 32Z" fill="#FFFFFF"/>
-        <rect x="0" y="34" width="128" height="50" fill="#D9C7A4"/>
-        <g data-fill="#5F7E8C,#F1C266,#F4C964" fill="#5F7E8C"><rect x="14" y="46" width="18" height="18"/><rect x="96" y="46" width="18" height="18"/></g>
-        <rect x="55" y="52" width="18" height="32" fill="#7A3B2E"/>
       </g>
-      <!-- neighbour, right -->
-      <g transform="translate(760 432)">
-        <path d="M-8 38 L80 0 L168 38Z" fill="#3F4A52"/><path data-op="0,0,1" opacity="0" d="M-10 36 L80 -3 L170 36 L158 36 L80 4 L2 36Z" fill="#FFFFFF"/>
-        <rect x="0" y="38" width="160" height="52" fill="#B9CBD1"/>
-        <g data-fill="#5F7E8C,#F1C266,#F4C964" fill="#5F7E8C"><rect x="16" y="50" width="20" height="20"/><rect x="56" y="50" width="20" height="20"/><rect x="124" y="50" width="20" height="20"/></g>
-        <rect x="92" y="56" width="20" height="34" fill="#2E4A3A"/>
-        <g class="bulbs" data-roof="-8,38 80,0 168,38"></g>
-      </g>
+      <!-- depth: neighbours, pole, background trees -->
+      <g class="par" data-par="34">
 
       <!-- utility pole, wires, street sign -->
       <g fill="none" stroke="#3C3A36" stroke-width="1.4" stroke-linecap="round"><path d="M272 309 Q0 336 -300 268"/><path d="M300 309 Q700 372 1300 248"/><path d="M286 316 Q760 420 1300 296"/></g>
@@ -96,13 +83,11 @@
       <rect x="258" y="462" width="56" height="10" rx="1.5" fill="#2E7D4F"/><rect x="262" y="466" width="48" height="2" fill="#FFFFFF" opacity=".9"/>
       <rect x="280" y="474" width="14" height="9" rx="1.5" fill="#24654A"/>
 
-      <!-- background trees -->
-      <g id="bgTrees">
-        <g transform="translate(220 470)"><rect x="-4" y="0" width="8" height="52" fill="#5A4130"/><circle cy="-6" r="30" data-fill="#4E8A3A,#D9822B,#D9822B" fill="#4E8A3A" data-op="1,1,0"/><path data-op="0,0,1" opacity="0" d="M0 6 L-18 -24 M0 0 L16 -28 M0 -6 L2 -34 M-9 -10 L-24 -14 M8 -14 L24 -12" stroke="#5A4130" stroke-width="3" stroke-linecap="round" fill="none"/></g>
-        <g transform="translate(620 476)"><rect x="-4" y="0" width="8" height="46" fill="#5A4130"/><circle cy="-4" r="26" data-fill="#5B9741,#C9561F,#C9561F" fill="#5B9741" data-op="1,1,0"/><path data-op="0,0,1" opacity="0" d="M0 6 L-15 -20 M0 0 L14 -24 M0 -6 L2 -30" stroke="#5A4130" stroke-width="3" stroke-linecap="round" fill="none"/></g>
-        <g transform="translate(980 466)"><rect x="-4" y="0" width="8" height="56" fill="#5A4130"/><circle cy="-8" r="34" data-fill="#477F35,#E8B53C,#E8B53C" fill="#477F35" data-op="1,1,0"/><path data-op="0,0,1" opacity="0" d="M0 6 L-20 -26 M0 0 L18 -30 M0 -6 L2 -38" stroke="#5A4130" stroke-width="3" stroke-linecap="round" fill="none"/></g>
       </g>
-
+      <!-- haze between the middle distance and the yard -->
+      <rect x="-300" y="300" width="1600" height="232" data-fill="#D4E8E6,#F5D2A6,#D6DFE7" fill="#D4E8E6" opacity=".26"/>
+      <!-- cast shadows, light from the upper right -->
+      <g fill="#0F2A18" opacity=".13"><path d="M300 522 L600 522 L584 534 L282 534Z"/></g>
       <!-- the Mangiapane house: a Livonia brick ranch -->
       <g id="house">
         <rect x="468" y="424" width="14" height="22" fill="#9A4F38"/>
@@ -180,7 +165,7 @@
       <g><rect x="938" y="520" width="5" height="96" fill="#3A4249"/><rect x="928" y="512" width="25" height="10" rx="3" fill="#3A4249"/><rect x="932" y="520" width="17" height="4" data-fill="#F4F1E6,#FFE3A8,#FFE7A8" fill="#F4F1E6"/></g>
 
       <!-- the work truck and trailer: compact white extended-cab pickup, open single-axle utility trailer -->
-      <g id="rig" transform="translate(1070.4 -229.95) scale(-1.35 1.35)">
+      <g class="par" data-par="-46"><g id="rig" transform="translate(1070.4 -229.95) scale(-1.35 1.35)">
         <ellipse cx="452" cy="679" rx="128" ry="3.5" fill="#000000" opacity=".18"/>
         <!-- trailer -->
         <path d="M462 665 L494 662 L494 666 L464 668Z" fill="#2E3236"/>
@@ -235,7 +220,7 @@
         <circle cx="352" cy="667" r="10" fill="#23272A"/><circle cx="352" cy="667" r="5" fill="#C9CDD0"/><circle cx="352" cy="667" r="1.6" fill="#8A8F93"/>
         <circle cx="440" cy="667" r="10" fill="#23272A"/><circle cx="440" cy="667" r="5" fill="#C9CDD0"/><circle cx="440" cy="667" r="1.6" fill="#8A8F93"/>
         <g data-op="0,0,1" opacity="0" fill="#FFFFFF"><path d="M383 635 Q386 631 400 631.5 Q414 631 418 635Z"/><path d="M420 645 Q440 641 463 644.5Z"/><path d="M336 649 Q350 645 366 646.5 L338 650Z"/></g>
-      </g>
+      </g></g>
     </svg>
 
     <div class="treewrap" id="tree" aria-hidden="true"><canvas id="treeCv"></canvas></div>
@@ -480,7 +465,7 @@
   <a class="callnow" href="tel:+17344502400">Call now<small>Booking now</small></a>
 </nav>
 <script src="js/site.js?v=13"></script>
-<script src="js/clean.js?v=1"></script>
+<script src="js/clean.js?v=2"></script>
 <script src="js/book.js?v=9"></script>
 </body>
 </html>
